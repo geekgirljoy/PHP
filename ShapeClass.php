@@ -7,12 +7,13 @@
       <?php
         class Shape 
         {
-          public $hasSides = true;
+            public $hasSides = true;
+            public $numOfSides;
         }
         
         class Square extends Shape 
         {
-            public $numOfSides = 4;
+            $numOfSides = 4;
         }
         
         $square = new Square();
