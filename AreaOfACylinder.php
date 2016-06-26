@@ -7,11 +7,10 @@ Area = (2 * Pi) * R * ( R + H )
 This number will be in square
 */
 
-$pi = 3.14159265359;
 $cylinder_radius = 7;
 $cylinder_height = 22;
 
-$area = ( 2 * $pi ) * $cylinder_radius * ( $cylinder_radius + $cylinder_height);
+$area = ( 2 * pi() ) * $cylinder_radius * ( $cylinder_radius + $cylinder_height);
 
 // note the . (period) is the concatenation symbol and
 // you can concatenate numbers and string like below
