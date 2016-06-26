@@ -2,19 +2,18 @@
 
 //Examples of PHP closures / anonymous functions
 
-// Without arguments
-$PHP_Hello_World_Closure = function ()
-{
+// Closure without arguments
+$HelloWorldClosure = function (){
    return "Hello World! ";
 };
-echo $PHP_Hello_World_Closure();
+echo $HelloWorldClosure();
+
 
 // With Arguments
-$PHP_Say_Hello_Closure = function ($name) 
-{
+$SayHelloClosure = function ($name) {
    return "Hello $name! ";
 };
-echo $PHP_Say_Hello_Closure("Joy");
+echo $SayHelloClosure("Joy");
 
 
 ?>
