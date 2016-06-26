@@ -1,22 +1,22 @@
 <?php
-
-// Confirm the Ending of a String
-
 /*
+Confirm the Ending of a String
 
-Check if a string (first argument) ends 
+This function will Check if a string (first argument) ends 
 with the given target string (second argument).
-
 */
-
-function myend($str, $target) 
-{
-  if ( $str[strlen($str) - strlen($target)] === $target){return true; }
-  else{ return false; }
+function MyEnd($str, $target){	
+    if (substr($str, -strlen($target), strlen($target)) == $target){
+        return 1;
+    }else{
+        return 0;
+    }
 }
 
-
-// Use
-// myend("Bastian", "n");
-echo myend("Bastian", "n");
+// Use Tests
+echo MyEnd('ZZZZZZZ', 'y');   // 0
+echo MyEnd('ZZZZZZZ', 'z');   // 0
+echo MyEnd('ZZZZZZZ', 'Z');   // 1
+echo MyEnd('BastiAn', 'ian'); // 0
+echo MyEnd('BastiAn', 'iAn'); // 1
 ?>
