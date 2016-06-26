@@ -1,6 +1,5 @@
 <?php
-function Palindrome($str) 
-{
+function Palindrome($str){
   $str = strtolower($str); // convert to lower
   $str = preg_replace("/[^a-zA-Z0-9]/", '', $str);
   $strRev = join(array_reverse(str_split($str)));
