@@ -31,4 +31,4 @@ MVC for the Fikits Application. This is a PHP version of a the Fikits applicatio
 ######TruncateAString.php
 
 
-All of this code is subject to minor alterations, complete rewrites, even removel.
+All of this code is subject to minor alterations, complete rewrites, even removal.
