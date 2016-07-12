@@ -34,7 +34,7 @@ function mutation($arr)
 
 // Use
 // mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]);
-//echo mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]); //true
-//echo mutation(["Alien", "line"]); // true
-//echo mutation(["hello", "hey"]); // false
+echo mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]); //true
+echo mutation(["Alien", "line"]); // true
+echo mutation(["hello", "hey"]); // false
 ?>
