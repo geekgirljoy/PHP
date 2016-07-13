@@ -13,6 +13,7 @@ Framework for the Fikits Application. This is a PHP version of a the Fikits appl
 ######AreaOfACylinder.php
 ######AssociativeArray.php
 ######BinaryAgents.php
+######BuildingArrays.php
 ######CheckForPalindromes.php
 ######Closures.php
 ######ConfirmTheEndingOfAString.php
