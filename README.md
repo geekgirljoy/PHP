@@ -18,6 +18,7 @@ Framework for the Fikits Application. This is a PHP version of a the Fikits appl
 ######Closures.php
 ######ConfirmTheEndingOfAString.php
 ######DecFloatOctHexBin.php
+######DefinedTemplateing.php
 ######DNAPairing.php
 ######DogClass.php
 ######FindTheLongestWordInAString.php
