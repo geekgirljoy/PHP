@@ -22,6 +22,7 @@ Framework for the Fikits Application. This is a PHP version of a the Fikits appl
 ######DNAPairing.php
 ######DogClass.php
 ######FindTheLongestWordInAString.php
+######FunctionalTemplatingHTML5.php
 ######Mutations.php
 ######PersonClass.php
 ######RepeatAString.php
