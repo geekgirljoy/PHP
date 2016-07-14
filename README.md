@@ -30,6 +30,7 @@ Framework for the Fikits Application. This is a PHP version of a the Fikits appl
 ######SearchAndReplace.php
 ######ShapeClass.php
 ######SpinalTapCase.php
+######ThisFolderStaysThisFolderGoes.php
 ######TitleCaseASentence.php
 ######TruncateAString.php
 
