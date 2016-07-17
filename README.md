@@ -25,6 +25,7 @@ Framework for the Fikits Application. This is a PHP version of a the Fikits appl
 ######FunctionalTemplatingHTML5.php
 ######Mutations.php
 ######PersonClass.php
+######Placeholder.php
 ######RepeatAString.php
 ######ReverseAString.php
 ######SearchAndReplace.php
