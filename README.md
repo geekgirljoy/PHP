@@ -17,6 +17,7 @@ Framework for the Fikits Application. This is a PHP version of a the Fikits appl
 ######CheckForPalindromes.php
 ######Closures.php
 ######ConfirmTheEndingOfAString.php
+######CreatureClass.php
 ######DecFloatOctHexBin.php
 ######DefinedTemplateing.php
 ######DNAPairing.php
