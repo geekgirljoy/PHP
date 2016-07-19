@@ -20,6 +20,7 @@ Framework for the Fikits Application. This is a PHP version of a the Fikits appl
 ######CreatureClass.php
 ######DecFloatOctHexBin.php
 ######DefinedTemplateing.php
+######DistinctMinimumMaximumAverageSQL.php
 ######DNAPairing.php
 ######DogClass.php
 ######FindTheLongestWordInAString.php
