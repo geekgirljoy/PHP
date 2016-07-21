@@ -23,6 +23,7 @@ Framework for the Fikits Application. This is a PHP version of a the Fikits appl
 ######DistinctMinimumMaximumAverageSQL.php
 ######DNAPairing.php
 ######DogClass.php
+######DynamicFunctionalTemplating.php
 ######FindKeyValuePairsInString.php
 ######FindTheLongestWordInAString.php
 ######FunctionalTemplatingHTML5.php
