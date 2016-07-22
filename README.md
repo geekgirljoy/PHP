@@ -27,6 +27,7 @@ Framework for the Fikits Application. This is a PHP version of a the Fikits appl
 ######FindKeyValuePairsInString.php
 ######FindTheLongestWordInAString.php
 ######FunctionalTemplatingHTML5.php
+######GeneratePrimeNumbers.php
 ######Mutations.php
 ######PersonClass.php
 ######Placeholder.php
