@@ -5,7 +5,7 @@ Essentially this repository is an ever growing backup of all my public PHP work.
 
 ##PHP Projects
 
-######[ fikitsphp[AssociativeArray.php](Projects/fikitsphp)
+######[fikitsphp](Projects/fikitsphp)
 Framework for the Fikits Application. This is a PHP version of a the Fikits application that was in development by myself and github.com/gabrielkunkel in Node.JS. At this time development is on hold on this and the main Fikits project.
 
 
