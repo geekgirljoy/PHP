@@ -28,7 +28,7 @@ function test($num, $expected){
 }
 
 $min = 0;               // Number to start with
-$max = 100;             // Number of primes to generate (should end on the 1 millionth prime 15,485,863)
+$max = 1000000;             // Number of primes to generate (should end on the 1 millionth prime 15,485,863)
 $curr_num = $min;       // The current number to check if prime
 $prime_stack = array(); // Found primes are stored here
 
