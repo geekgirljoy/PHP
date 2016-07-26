@@ -5,7 +5,7 @@ header("Content-Type: image/png");
 //
 // Example Use <img src="http://localhost/?500x500">
 //
-// Otherwise you will have to link to it like this: <img src="http://localhost/Placeholder.php?500x500">
+// Otherwise you will have to link to it like this: <img src="http://localhost/PlaceholderImageGenerator.php?500x500">
 //
 // Additionally, because I am not useing named variables in the string
 // we cannot use $_GET[] or $_REQUEST[] to obtain the size variables
