@@ -31,7 +31,7 @@ This folder contains stand alone code. Each does domething different and is here
 ######[GeneratePrimeNumbers.php](Loose Code/GeneratePrimeNumbers.php)
 ######[Mutations.php](Loose Code/Mutations.php)
 ######[PersonClass.php](Loose Code/PersonClass.php)
-######[Placeholder.php](Loose Code/Placeholder.php)
+######[PlaceholderImageGenerator.php](Loose Code/PlaceholderImageGenerator.php)
 ######[RepeatAString.php](Loose Code/RepeatAString.php)
 ######[ReverseAString.php](Loose Code/ReverseAString.php)
 ######[SearchAndReplace.php](Loose Code/SearchAndReplace.php)
