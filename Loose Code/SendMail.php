@@ -10,7 +10,7 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['messge'])) {
 	// CC's
 	$header .= 'Cc: Designer@JoyHarvel.com' . "\r\n";
 	$header .= 'Cc: Executive1@JoyHarvel.com' . "\r\n";
-	$header .= 'Cc: Executive1@JoyHarvel.com' . "\r\n";
+	$header .= 'Cc: Executive2@JoyHarvel.com' . "\r\n";
 	// BCC's
 	$header .= 'Bbc: CEO@JoyHarvel.com' . "\r\n";
 	$header .= 'Bbc: Executive1@JoyHarvel.com' . "\r\n";
