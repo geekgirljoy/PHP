@@ -20,7 +20,7 @@ function isprime($num){
     return true; // I found a prime number! :-)
 }
 
-// Is $num equal to $expected) test and report
+// Is $num equal to $expected? Test and report
 function test($num, $expected){
     $output = PHP_EOL ."<br>Recieved: $num." . PHP_EOL . "<br>Expected: $expected". PHP_EOL . "<br>Result: ";
     $output .= ($num == $expected) ? "Passed Test" : "Failed Test";
