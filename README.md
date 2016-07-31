@@ -35,6 +35,7 @@ This folder contains stand alone code. Each does domething different and is here
 ######[RepeatAString.php](Loose Code/RepeatAString.php)
 ######[ReverseAString.php](Loose Code/ReverseAString.php)
 ######[SearchAndReplace.php](Loose Code/SearchAndReplace.php)
+######[SendMail.php](Loose Code/SendMail.php)
 ######[ShapeClass.php](Loose Code/ShapeClass.php)
 ######[SigmoidFunction.php](Loose Code/SigmoidFunction.php)
 ######[SpinalTapCase.php](Loose Code/SpinalTapCase.php)
