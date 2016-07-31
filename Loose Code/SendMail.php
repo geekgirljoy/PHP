@@ -1,6 +1,5 @@
 <?php
-if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['messge']))
-{
+if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['messge'])) {
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$messge = $_POST['messge'];
