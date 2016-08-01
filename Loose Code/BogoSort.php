@@ -6,7 +6,7 @@
 	
 	This "sort" is basiclly the worst sort possible and ammounts to random reordering
 	
-	DO NOT USE THIS SORTING FUNCTION - IT IS A DEOMNSTRATION OF WHAT >>>NOT<<< TO DO
+	DO NOT USE THIS SORTING FUNCTION - IT IS A DEMONSTRATION OF WHAT >>>NOT<<< TO DO
 	
 	
 	
