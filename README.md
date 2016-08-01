@@ -15,6 +15,7 @@ This folder contains stand alone code. Each does domething different and is here
 ######[AssociativeArray.php](Loose Code/AssociativeArray.php)
 ######[BinaryAgents.php](Loose Code/BinaryAgents.php)
 ######[BuildingArrays.php](Loose Code/BuildingArrays.php)
+######[BubbleSort.php](Loose Code/BubbleSort.php)
 ######[CheckForPalindromes.php](Loose Code/CheckForPalindromes.php)
 ######[Closures.php](Loose Code/Closures.php)
 ######[ConfirmTheEndingOfAString.php](Loose Code/ConfirmTheEndingOfAString.php)
