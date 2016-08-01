@@ -5,8 +5,7 @@
 function BubbleSort($array){
 	if(isset($array)) {/* If $array is set */
 		$array_length = count($array);
-		$sorted = false;
-		while(!$sorted){
+		do{
 			$swapped = false;
 			for($i = 1; $i < $array_length; $i++) {
 				/* Is the number to the left of this number larger?...  */
@@ -18,10 +17,8 @@ function BubbleSort($array){
 					$swapped = true;
 				}
 			}
-			if($swapped == false) {
-				$sorted = true;
-			}
-		}
+
+		}while($swapped == true);
 		return $array;
 	}else {/* $array not set issue message and end program */
 		die("No Array! Use: BubbleSort(ARRAY)");
