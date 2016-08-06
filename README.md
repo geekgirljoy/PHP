@@ -12,6 +12,7 @@ Framework for the Fikits Application. This is a PHP version of a the Fikits appl
 ##Loose Code
 This folder contains stand alone code. Each does domething different and is here because I want a backup of this code for any number of reasons.                                
 ######[AreaOfACylinder.php](Loose Code/AreaOfACylinder.php)
+######[AreaOfATriangle.php](Loose Code/AreaOfATriangle.php)
 ######[AssociativeArray.php](Loose Code/AssociativeArray.php)
 ######[BinaryAgents.php](Loose Code/BinaryAgents.php)
 ######[BogoSort.php](Loose Code/BogoSort.php)
