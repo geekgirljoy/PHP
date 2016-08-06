@@ -48,22 +48,9 @@ var_dump($sorted);
 
 echo '<br>' . PHP_EOL;
 // Test proofs for provided array 0 - 5
-if ($sorted[0] == 0) {
-	echo '0 is correct<br>' . PHP_EOL;
-}
-if ($sorted[1] == 1) {
-	echo '1 is correct<br>' . PHP_EOL;
-}
-if ($sorted[2] == 2) {
-	echo '2 is correct<br>' . PHP_EOL;
-}
-if ($sorted[3] == 3) {
-	echo '3 is correct<br>' . PHP_EOL;
-}
-if ($sorted[4] == 4) {
-	echo '4 is correct<br>' . PHP_EOL;
-}
-if ($sorted[5] == 5) {
-	echo '5 is correct<br>' . PHP_EOL;
+for($i = 0; $i < 5; $i++){
+	if ($sorted[$i] == $i) {
+		echo "$i is correct<br>" . PHP_EOL;
+	}
 }
 ?>
