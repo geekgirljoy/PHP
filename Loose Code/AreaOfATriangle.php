@@ -6,9 +6,9 @@ Area of a Triangle is equal to the base of the triangle multiplied by the height
 $triangle_base = 7;
 $triangle_height = 22;
 
-echo "The area of your triangle is: " . $area = $triangle_height * $triangle_base;
+echo "The area of your triangle is: " . $area = $triangle_height * $triangle_base / 2;
 
-// will output: The area of your triangle is: 154
+// will output: The area of your triangle is: 77
 
 
 ?>
