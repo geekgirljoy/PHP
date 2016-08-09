@@ -1,6 +1,6 @@
 <?php
 /* 
-    Spider.php 
+	Spider.php 
 
 	Crawl a website and obtain it's header data along with the title and body data.
 */
@@ -46,7 +46,7 @@ function Clean($string) {
 }
 
 /*
-    CrawlPage($url)
+	CrawlPage($url)
 	
 	returns an associative array with the following keys:
 	'head', 'title', 'body'
@@ -55,7 +55,6 @@ function CrawlPage($url) {
 	$webpage = file_get_contents($url);
 	
 	if($webpage) {
-
 		/* Extract Head */
 		if (preg_match ("/<head\>(.*)<\/head>/siU", $webpage, $match)) {
 			$page_data['head'] = Clean($match[1]);
