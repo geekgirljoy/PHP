@@ -41,6 +41,7 @@ This folder contains stand alone code. Each does domething different and is here
 ######[SendMail.php](Loose Code/SendMail.php)
 ######[ShapeClass.php](Loose Code/ShapeClass.php)
 ######[SigmoidFunction.php](Loose Code/SigmoidFunction.php)
+######[Spider.php](Loose Code/Spider.php)
 ######[SpinalTapCase.php](Loose Code/SpinalTapCase.php)
 ######[ThisFolderStaysThisFolderGoes.php](Loose Code/ThisFolderStaysThisFolderGoes.php)
 ######[TitleCaseASentence.php](Loose Code/TitleCaseASentence.php)
