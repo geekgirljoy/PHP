@@ -80,14 +80,15 @@ function LogError($err) {
 
 /* connect to db */
 $db = new PDO('mysql:host=localhost;dbname=spider;charset=utf8mb4', 'root', '');
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); /* exception mode */
-$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false); /* disable prepare emulation */
-$urls = null;
-$crawl_data = array();
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	/* exception mode */
+$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false); 			/* disable prepare emulation */
+$crawl_data = array();											/* an associative array of the data returned by CrawlPage() */
 
 try {
     $query = $db->query('SELECT `url` FROM `spider`.`urls`');	/* query all urls from db using pdo*/ 
+	$num_of_urls = $query->rowCount();							/* $num_of_urls is an integer of now many urls there are */ 
 	$urls = $query->fetchAll(PDO::FETCH_ASSOC);				 	/* $urls is an array of all known urls */
+	
 	
 } catch(PDOException $ex) { /* unable to connect to db */
     echo "An Error occured! Unable to Query the Database for URLs.";	/* issue user message */
@@ -96,8 +97,10 @@ try {
 
 /* crawl all know urls */
 foreach($urls as $url) {
-	array_push($crawl_data, CrawlPage($url['url']));
+	array_push($crawl_data, CrawlPage($url['url'])); /* crawl page and push results into the $crawl_data array */
 }
+
+echo "Total Number of URLs: $num_of_urls <br>" . PHP_EOL;
 
 /* output results to page */
 var_dump($crawl_data);
