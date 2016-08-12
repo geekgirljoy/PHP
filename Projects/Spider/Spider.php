@@ -72,19 +72,35 @@ function CrawlPage($url) {
 	return $page_data;
 }
 
+function LogError($err) {
+	/* write out errors */	
+}
+
 /*/////////////////////////////////////////////////////////////////*/
 
-/* Connect to DB */
+/* connect to db */
+$db = new PDO('mysql:host=localhost;dbname=spider;charset=utf8mb4', 'root', '');
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); /* exception mode */
+$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false); /* disable prepare emulation */
+$urls = null;
+$crawl_data = array();
 
+try {
+    $query = $db->query('SELECT `url` FROM `spider`.`urls`');	/* query all urls from db using pdo*/ 
+	$urls = $query->fetchAll(PDO::FETCH_ASSOC);				 	/* $urls is an array of all known urls */
+	
+} catch(PDOException $ex) { /* unable to connect to db */
+    echo "An Error occured! Unable to Query the Database for URLs.";	/* issue user message */
+    LogError($ex->getMessage()); 										/* log error */
+}
 
-/* Build array of urls to crawl */
+/* crawl all know urls */
+foreach($urls as $url) {
+	array_push($crawl_data, CrawlPage($url['url']));
+}
 
-/* foreach($crawl_list as $url) {
-	/* Crawl a Page */
-} */
-
-/* Crawl a Page */
-$crawl_data = CrawlPage('http://www.joyharvel.com/');
+/* output results to page */
 var_dump($crawl_data);
 
+/* log new data in db */
 ?>
