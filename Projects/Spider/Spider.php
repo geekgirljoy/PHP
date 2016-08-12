@@ -55,16 +55,14 @@ function CrawlPage($url) {
 	$webpage = file_get_contents($url);
 	
 	if($webpage) {
-		/* Extract Head */
-		if (preg_match ("/<head\>(.*)<\/head>/siU", $webpage, $match)) {
+		
+		if (preg_match ("/<head\>(.*)<\/head>/siU", $webpage, $match)) { /* Extract Head */
 			$page_data['head'] = Clean($match[1]);
 		}
-		/* Extract Title */
-		if (preg_match ("/<title\>(.*)<\/title>/siU", $webpage, $match)) {
+		elseif (preg_match ("/<title\>(.*)<\/title>/siU", $webpage, $match)) { /* Extract Title */
 			$page_data['title'] = Clean($match[1]);
 		}
-		/* Extract Body */
-		if (preg_match ("/<body.*\>(.*)<\/body>/siU", $webpage, $match)) {
+		elseif (preg_match ("/<body.*\>(.*)<\/body>/siU", $webpage, $match)) {/* Extract Body */
 			$page_data['body'] = Clean($match[1]);
 		}
 	}else {
@@ -75,6 +73,16 @@ function CrawlPage($url) {
 }
 
 /*/////////////////////////////////////////////////////////////////*/
+
+/* Connect to DB */
+
+
+/* Build array of urls to crawl */
+
+/* foreach($crawl_list as $url) {
+	/* Crawl a Page */
+} */
+
 /* Crawl a Page */
 $crawl_data = CrawlPage('http://www.joyharvel.com/');
 var_dump($crawl_data);
