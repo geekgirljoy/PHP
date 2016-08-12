@@ -8,6 +8,9 @@ Essentially this repository is an ever growing backup of all my public PHP work.
 ######[fikitsphp](Projects/fikitsphp)
 Framework for the Fikits Application. This is a PHP version of a the Fikits application that was in development by myself and github.com/gabrielkunkel in Node.JS. At this time development is on hold on this and the main Fikits project.
 
+######[Spider](Projects/Spider)
+A Web Spider built with PHP & MySQL. Currently the spider uses file_get_contents() however I may migrate to CURL as it is known to be faster.
+
 
 ##Loose Code
 This folder contains stand alone code. Each does domething different and is here because I want a backup of this code for any number of reasons.                                
@@ -41,7 +44,6 @@ This folder contains stand alone code. Each does domething different and is here
 ######[SendMail.php](Loose Code/SendMail.php)
 ######[ShapeClass.php](Loose Code/ShapeClass.php)
 ######[SigmoidFunction.php](Loose Code/SigmoidFunction.php)
-######[Spider.php](Loose Code/Spider.php)
 ######[SpinalTapCase.php](Loose Code/SpinalTapCase.php)
 ######[ThisFolderStaysThisFolderGoes.php](Loose Code/ThisFolderStaysThisFolderGoes.php)
 ######[TitleCaseASentence.php](Loose Code/TitleCaseASentence.php)
