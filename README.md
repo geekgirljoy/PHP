@@ -13,7 +13,7 @@ A Web Spider built with PHP & MySQL. Currently the spider uses file_get_contents
 
 
 ##Loose Code
-This folder contains stand alone code. Each does domething different and is here because I want a backup of this code for any number of reasons.                                
+This folder contains stand alone code. Each does something different and is here because I want a backup of this code for any number of reasons.                                
 ######[AreaOfACylinder.php](Loose Code/AreaOfACylinder.php)
 ######[AreaOfATriangle.php](Loose Code/AreaOfATriangle.php)
 ######[AssociativeArray.php](Loose Code/AssociativeArray.php)
