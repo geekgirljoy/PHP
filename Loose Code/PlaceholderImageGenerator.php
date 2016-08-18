@@ -16,7 +16,7 @@ header("Content-Type: image/png");
 //
 
 
-// Domain name lenght varies - find where the variables begin
+// Domain name length varies - find where the variables begin
 $variables_start_at = stripos($_SERVER['QUERY_STRING'],"?"); 
 $raw_variables = substr($_SERVER['QUERY_STRING'],$variables_start_at); // contains the variables
 $x_pos = stripos($raw_variables,"x"); // find the delimiter
