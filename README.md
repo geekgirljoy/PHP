@@ -11,6 +11,11 @@ Framework for the Fikits Application. This is a PHP version of a the Fikits appl
 ######[Spider](Projects/Spider)
 A Web Spider built with PHP & MySQL. Currently the spider uses file_get_contents() however I may migrate to CURL as it is known to be faster.
 
+######[Evolution](Projects/Evolution)
+Evolution is an evolution simulation using PHP and is currently a work in progress. It features autoloading classes and random generation.
+
+
+
 
 ##Loose Code
 This folder contains stand alone code. Each does something different and is here because I want a backup of this code for any number of reasons.                                
@@ -24,7 +29,6 @@ This folder contains stand alone code. Each does something different and is here
 ######[CheckForPalindromes.php](Loose Code/CheckForPalindromes.php)
 ######[Closures.php](Loose Code/Closures.php)
 ######[ConfirmTheEndingOfAString.php](Loose Code/ConfirmTheEndingOfAString.php)
-######[CreatureClass.php](Loose Code/CreatureClass.php)
 ######[DecFloatOctHexBin.php](Loose Code/DecFloatOctHexBin.php)
 ######[DefinedTemplateing.php](Loose Code/DefinedTemplateing.php)
 ######[DistinctMinimumMaximumAverageSQL.php](Loose Code/DistinctMinimumMaximumAverageSQL.php)
