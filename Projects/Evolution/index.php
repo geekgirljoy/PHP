@@ -25,11 +25,15 @@ $new_map = new Grid( array('width'=>256, 'height'=>256, 'depth'=>256) );
 $number_of_creatures = 5;
 $number_of_epochs = 500000;
 $Creatures = array();
+$AsexualCreatures = array();
+$FemaleCreatures = array();
+$MaleCreatures = array();
 
 /* Create all the creatures */
 for($i=0;$i< $number_of_creatures; $i++)
 {
 	$gender = mt_rand ( 0 , 2 );
+	
 	$spawnMethod = mt_rand ( 0 , 2 );
 	$vision = mt_rand ( mt_rand ( 0 , 4 ) , mt_rand ( 5 , 10 ) );
 	$new_creature = new Creature( 
@@ -50,6 +54,9 @@ for($i=0;$i< $number_of_creatures; $i++)
 	);
 
 	array_push($Creatures, $new_creature );
+	if ($gender == 0) {array_push($AsexualCreatures, $new_creature);}
+	if ($gender == 1) {array_push($FemaleCreatures, $new_creature);}
+	if ($gender == 2) {array_push($MaleCreatures, $new_creature);}
 }
 
 echo "<br/>";
@@ -149,6 +156,36 @@ foreach ($Creatures as $Creature)
 	
 }
 echo "All creatures tested.<br/><br/>";
+
+$number_of_eggs = 3;
+$Eggs = array();
+$number_of_females = count($FemaleCreatures) - 1;
+$number_of_males = count($MaleCreatures) - 1;
+
+if ($number_of_females > 0 && $number_of_males > 0){
+	for($i=0;$i< $number_of_eggs; $i++)
+	{
+		$Mother = $FemaleCreatures[mt_rand ( 1 , $number_of_females)];
+		$Father = $MaleCreatures[mt_rand ( 1 , $number_of_males)];
+		$new_egg = new Egg( 
+			array(
+				  'mother'=>$Mother,
+				  'father'=>$Father,
+				  'xPos'=>$Mother->xPos,
+				  'yPos'=>$Mother->yPos,
+				  'zPos'=>$Mother->zPos,
+				 )
+		);
+
+		array_push($Eggs, $new_egg);
+	}
+}
+else{
+	echo "There are no males or female creatures to lay eggs.<br/><br/>";
+}
+
+
+
 
 
 /* Place all the creatures on map here*/
