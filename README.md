@@ -48,7 +48,7 @@ This folder contains stand alone code. Each does something different and is here
 ######[SendMail.php](Loose Code/SendMail.php)
 ######[ShapeClass.php](Loose Code/ShapeClass.php)
 ######[SigmoidFunction.php](Loose Code/SigmoidFunction.php)
-######[SpinalTapCase.php](Loose Code/SpinalTapCase.php)
+######[sumArray.php](Loose Code/sumArray.php)
 ######[ThisFolderStaysThisFolderGoes.php](Loose Code/ThisFolderStaysThisFolderGoes.php)
 ######[TitleCaseASentence.php](Loose Code/TitleCaseASentence.php)
 ######[TruncateAString.php](Loose Code/TruncateAString.php)
