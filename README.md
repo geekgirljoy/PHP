@@ -51,6 +51,7 @@ This folder contains stand alone code. Each does something different and is here
 ######[SumArray.php](Loose Code/SumArray.php)
 ######[ThisFolderStaysThisFolderGoes.php](Loose Code/ThisFolderStaysThisFolderGoes.php)
 ######[TitleCaseASentence.php](Loose Code/TitleCaseASentence.php)
+######[TrainFANNNeuralNetworkFromMySQL.php](Loose Code/TrainFANNNeuralNetworkFromMySQL.php)
 ######[TruncateAString.php](Loose Code/TruncateAString.php)
 
 
