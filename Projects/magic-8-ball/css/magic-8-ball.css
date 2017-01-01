@@ -1,0 +1,35 @@
+body{
+    background-color:#444444;
+}
+h1{
+    font-family: 'Creepster', cursive;
+    color:#00bb00;
+}
+#eight{
+    font-size:400%;
+    color: #000000;
+}
+.black-ball{
+    border-radius: 50%;
+    background-color: #000;
+    width: 200px;
+    height: 200px;
+    display:table;
+    text-align:center;
+    padding: 50px;
+    box-shadow: 5px 5px 5px #333333;    
+}
+
+.white-ball{
+    border-radius: 50%;
+    background-color: #fff;
+    width: 22%;
+    height: 22%;
+    display:table-cell;
+    vertical-align:middle;
+    font-family: 'Creepster', cursive;
+}
+
+.answer{
+    color: #bb0000;
+}
