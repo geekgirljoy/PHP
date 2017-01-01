@@ -14,7 +14,8 @@ A Web Spider built with PHP & MySQL. Currently the spider uses file_get_contents
 ######[Evolution](Projects/Evolution)
 Evolution is an evolution simulation using PHP and is currently a work in progress. It features autoloading classes and random generation.
 
-
+######[Magic 8 Ball](Projects/magic-8-ball)
+Evolution is an evolution simulation using PHP and is currently a work in progress. It features autoloading classes and random generation.
 
 
 ##Loose Code
