@@ -18,7 +18,7 @@ function Maximum($field, $conn, $table){
 	return mysqli_query($conn, $SQL);
 }
 
-function ($field, $conn, $table){
+function Average($field, $conn, $table){
 	$SQL = "SELECT AVG(`". $field ."`) FROM `$table`";
 	return mysqli_query($conn, $SQL);
 }
