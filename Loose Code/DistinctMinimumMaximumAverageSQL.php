@@ -36,7 +36,7 @@ $connection = mysqli_connect($hostname, $username, $password, $dbname, $port)or 
 
 // Example Use:
 
-// Totals / sort each pertinant param
+// Totals / sort each pertinent param
 $ethnicityTotal = Distinct('ethnicity', $connection, "mock_data");
 $genderTotal = Distinct('gender', $connection, "mock_data");
 $primaryLanguagesTotal = Distinct('primaryLanguages', $connection, "mock_data");
@@ -48,7 +48,7 @@ $relationshipPreferenceTotal = Distinct('relationshipPreference', $connection, "
 $religionTotal = Distinct('religion', $connection, "mock_data");
 $politicalTotal = Distinct('political', $connection, "mock_data");
 
-//--- MIN & MAX each pertinant param
+//--- MIN & MAX each pertinent param
 $youngest = Maximum('birthDate', $connection, "mock_data");
 $oldest = Minimum('birthDate', $connection, "mock_data");
 $shortest = Minimum('height', $connection, "mock_data");
