@@ -3,7 +3,7 @@
 // DistinctMinimumMaximumAverageSQL
 
 function Distinct($field, $conn, $table){
-	$SQL = "SELECT DISTINCT `". $field ."` FROM $table ORDER BY `$table`.`" . $field . "` ASC";
+	$SQL = "SELECT DISTINCT `". $field ."` FROM `$table` ORDER BY `$table`.`" . $field . "` ASC";
 	$result = mysqli_query($conn, $SQL);
 	return $result->num_rows;
 }
