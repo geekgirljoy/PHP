@@ -17,6 +17,10 @@ Evolution is an evolution simulation using PHP and is currently a work in progre
 ###### [Magic 8 Ball](Projects/magic-8-ball)
 Magic 8 Ball is a browser based implementation of a "magic 8 ball". This project features autoloading classes and CSS to create a virtual 8 Ball that will soon become your goto oracle with all important questions in your life.
 
+###### [SierpinskiTriangle](Projects/SierpinskiTriangle)
+[SierpinskiTriangle.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/SierpinskiTriangle/SierpinskiTriangle.php)
+[GIFEncoder.class.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/SierpinskiTriangle/GIFEncoder.class.php)
+
 
 ## Loose Code
 This folder contains stand alone code. Each does something different and is here because I want a backup of this code for any number of reasons.                                
