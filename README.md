@@ -49,6 +49,7 @@ This folder contains stand alone code. Each does something different and is here
 ###### [Mutations.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/Mutations.php)
 ###### [PersonClass.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/PersonClass.php)
 ###### [PlaceholderImageGenerator.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/PlaceholderImageGenerator.php)
+###### [RandomEvenOddBitwise.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/RandomEvenOddBitwise.php)
 ###### [RepeatAString.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/RepeatAString.php)
 ###### [ReverseAString.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/ReverseAString.php)
 ###### [SearchAndReplace.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/SearchAndReplace.php)
