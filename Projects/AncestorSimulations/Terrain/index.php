@@ -68,7 +68,7 @@ for($level = 1; ($chunk_size / $level) > 0.1; $level++){
 	for($row_offset = 0; $row_offset <= $size; $row_offset+=$chunk_size){
 		for($col_offset = 0; $col_offset <= $size; $col_offset+=$chunk_size){
 			
-			// Do (Square Step)
+			// Do (Diamond Step)
 			// if the position is not already set then set it
 			if(!isset($terrain[$row_offset - $chunk_size/2][$col_offset])){
 				$terrain[$row_offset - $chunk_size/2][$col_offset] = ($average + mt_rand($min_roughness, $max_roughness)) / 5;
@@ -93,10 +93,10 @@ for($level = 1; ($chunk_size / $level) > 0.1; $level++){
 			}
 			$d = $terrain[$row_offset + $chunk_size/2][$col_offset];
 			
-			// Computer the average height of $a + $b + $c + $d
+			// Compute the average height of $a + $b + $c + $d
 			$average = $a + $b + $c + $d;
 						
-			// Set Center (Diamond Step)
+			// Set Center (Square Step)
 			// if the position is not already set then set it
 			if(!isset($terrain[$row_offset + $chunk_size/2][$col_offset + $chunk_size/2])){
 				$terrain[$row_offset + $chunk_size/2][$col_offset + $chunk_size/2] = ($average + mt_rand($min_roughness, $max_roughness)) / 5;
