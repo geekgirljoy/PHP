@@ -1,6 +1,7 @@
 
 <?php
 
+//https://en.wikipedia.org/wiki/Lucas_number
 function Lucas($n){
 	return (pow((1 + sqrt(5)) / 2, $n) - pow((1 - sqrt(5)) / 2, $n) )/sqrt(5);
 }
