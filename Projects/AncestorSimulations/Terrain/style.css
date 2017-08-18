@@ -68,7 +68,7 @@ input[type=submit]:hover {
   border: none;
 }
 
-img{
+#terrain{
 	 float: left;
 	 margin-left:10px;
 	 border: 1px solid #3498db;
@@ -76,6 +76,15 @@ img{
 	 max-height:500px;
 	 min-width:500px;
 	 min-height:500px;
+}
+
+.planet-view{
+    	 border-radius: 50%;
+		 z-index:-1;
+	outline: none;
+    border-color: #9ecaff;
+    box-shadow: 0px 0px 30px #9ecaed;
+	  position: relative;
 }
 
 input[type=text] {
@@ -197,8 +206,3 @@ input[type=range]::-ms-thumb {
   background: #3498db;
   cursor: pointer;
 }
-
-
-
-
-
