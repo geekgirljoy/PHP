@@ -101,7 +101,7 @@ for($i = 0; $i < $number_of_stars; $i++){
        $col = $col + ($max_spread * $col * RandomFloat()) - ($max_spread * $col * RandomFloat());
               
        if($i > $number_of_stars * 0.6){
-          $radius = 6 * pi()* $steps; // increse radius and spread out
+          $radius = 6 * pi()* $steps; // increase radius and spread out
       }
    }
    elseif($galaxy_type == 'quasar'){// Quasar Galaxy
@@ -143,7 +143,7 @@ for($i = 0; $i < $number_of_stars; $i++){
       $col = $col + ($max_spread * $col * RandomFloat()) - ($max_spread * $col * RandomFloat());
   }
     
-  // Flip a coin to deturmine which arm 
+  // Flip a coin to determine which arm 
   // the star should be on.
   if (mt_rand(0, 1) == 1){
       // if heads put it on the second arm
