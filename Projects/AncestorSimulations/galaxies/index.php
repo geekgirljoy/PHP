@@ -93,57 +93,42 @@ $dark_grey = imagecolorallocate($galaxy, 50, 50, 50);
 // Create Image of Galaxy
 for($i = 0; $i < $number_of_stars; $i++){
   $angle = $radius * RandomFloat(); // Pick a random point in the Spiral
-
-   if($galaxy_type == 'spiral'){// Spiral Galaxy
-       $row = $a * exp($b * $angle) * cos($angle);
-       $row = $row + ($max_spread * $row * RandomFloat()) - ($max_spread * $row * RandomFloat());
-       $col = $a * exp($b * $angle) * sin($angle);
-       $col = $col + ($max_spread * $col * RandomFloat()) - ($max_spread * $col * RandomFloat());
-              
-       if($i > $number_of_stars * 0.6){
-          $radius = 6 * pi()* $steps; // increase radius and spread out
-      }
-   }
-   elseif($galaxy_type == 'quasar'){// Quasar Galaxy
-      if($a != 1){
-          $a = mt_rand(1, 2) + RandomFloat();
-          $b = 0.2;
-          $max_spread = RandomFloat();
-      }
-      
-      $row = $a * exp($b * $angle) * cosh($angle);
+ 
+  
+  if($galaxy_type == 'quasar'){
+	  $a = mt_rand(1, 2) + RandomFloat();
+	  $b = 0.2;
+	  $max_spread = RandomFloat();
+	  $row = $a * exp($b * $angle) * cosh($angle);
       $row = $row + ($max_spread * $row * RandomFloat()) - ($max_spread * $row * RandomFloat());
       $col = $a * exp($b * $angle) * sinh($angle); 
       $col = $col + ($max_spread * $col * RandomFloat()) - ($max_spread * $col * RandomFloat());
-  }
-  elseif($galaxy_type == 'globular'){// Globular/Elliptical Galaxy
-      if($max_spread != 1){     
-          $a = mt_rand(1, 2) + RandomFloat();
-          $b = 0.2;      
-          $max_spread = 1;
-          $radius = 6 * pi()* $steps;
-      }
-      
-      $row = $a * exp($b * $angle) * cos($angle);
-      $row = $row + ($max_spread * $row * RandomFloat()) - ($max_spread * $row * RandomFloat());
-      $col = $a * exp($b * $angle) * sin($angle); 
-      $col = $col + ($max_spread * $col * RandomFloat()) - ($max_spread * $col * RandomFloat());
-  }
-  elseif($galaxy_type == 'irregular'){// Irregular Galaxy
-      if($max_spread != 1){     
-          $a = 8 + RandomFloat();
-          $b = 0.2;      
-          $max_spread = 1.3;
-          $radius = 6 * pi()* $steps;
-      }
-      
-      $row = $a * exp($b * $angle) * cos($angle);
+  }else{// Spiral / Globular / Irregular
+      if($galaxy_type == 'spiral'){// Spiral Galaxy           
+		  // if($i > $number_of_stars * 0.6){
+			  $radius = 6 * pi()* $steps; // increse radius and spread out
+		 // }
+	   }
+	  elseif($galaxy_type == 'globular'){// Globular/Elliptical Galaxy
+		  $a = mt_rand(1, 2) + RandomFloat();
+		  $b = 0.2;      
+		  $max_spread = 1;
+		  $radius = 6 * pi()* $steps;
+	  }
+	  elseif($galaxy_type == 'irregular'){// Irregular Galaxy 
+		  $a = 8 + RandomFloat();
+		  $b = 0.2;
+		  $max_spread = 1.3;
+		  $radius = 6 * pi()* $steps;
+	  }
+	  $row = $a * exp($b * $angle) * cos($angle);
       $row = $row + ($max_spread * $row * RandomFloat()) - ($max_spread * $row * RandomFloat());
       $col = $a * exp($b * $angle) * sin($angle); 
       $col = $col + ($max_spread * $col * RandomFloat()) - ($max_spread * $col * RandomFloat());
   }
     
-  // Flip a coin to determine which arm 
+    
+  // Flip a coin to deturmine which arm 
   // the star should be on.
   if (mt_rand(0, 1) == 1){
       // if heads put it on the second arm
@@ -176,7 +161,6 @@ if($apply_negate == true){
 if($apply_vignette == true){
     @vignette($galaxy); // vignette
 }
-
 
 // Output image
 imagepng($galaxy, "galaxy.png");
