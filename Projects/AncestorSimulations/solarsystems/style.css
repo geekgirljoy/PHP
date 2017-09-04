@@ -82,16 +82,6 @@ input[type=submit]:hover {
 
 
 
-#galaxy{
-	 float: left;
-	 margin-left:10px;
-	 border: 1px solid #3498db;
-	 max-width:500px;
-	 max-height:500px;
-	 min-width:500px;
-	 min-height:500px;
-}
-
 
 input[type=text] {
   height: 20px;
