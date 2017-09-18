@@ -61,13 +61,16 @@ function CreateGif($num_images){
 
 
 $delta_time = 0.1; // 0.1 // 0.03
-if(isset($_POST["epocs"])){$simulations = $_POST["epocs"];}
+if(isset($_POST["epochs"])){$simulations = $_POST["epochs"];}
 else{$simulations = 210;}
 
 
 if(isset($_POST["zoom"])){$high = $_POST["zoom"];}
 else{$high = 6;}
 $low = $high * -1;
+
+
+
 
 
 ////
@@ -81,6 +84,9 @@ $img_size = pow(2, $exponent) + 1;
 
 if(isset($_POST["number-of-bodies"])){$number_of_orbital_bodies = $_POST["number-of-bodies"];}
 else{$number_of_orbital_bodies = 9;}
+
+
+
 
 $system = imagecreatetruecolor($img_size, $img_size);
 $space_black = imagecolorallocate($system, 0, 0, 0);
@@ -97,46 +103,61 @@ $sun_yellow = imagecolorallocate($system, 255, 255, 0); // Color
 
 
 $planets = array();
+
+
+
 // generate system
 for($i = 0; $i < $number_of_orbital_bodies; $i++){
+
 
     ////
     // Define Planets
     ////
-    $au_from_sun=RandomFloat(2+$i); // AU from Sun
-    $size=RandomFloat(8); // Size
+    $au_from_sun=RandomFloat(1+$i); // AU from Sun
+    //$size=RandomFloat(8); // Size
+    $size=RandomFloat(3); // Size
     $color = imagecolorallocate($system, mt_rand(50, 255), mt_rand(50, 255), mt_rand(50, 255)); // Color
-    $vy = RandomFloat(1); // Velocity
+    //$vy = RandomFloat(1); // Velocity
+    $vy = 1; // Velocity
     $vx = 0;              // Velocity    
     $x = $au_from_sun; // Initial x position
-    $y = $au_from_sun; // Initial y position
+    $y = 0; // Initial y position
 
 
     // randomly flip spawn quadrant
-    if(mt_rand(0,1) == 1){
-        $y = $y / -1;
+	if(isset($_POST['flip-y'])){ 
+		//if(mt_rand(0,1) == 1){
+			$y = $y / -1;
+		//}
+	}
+    if(isset($_POST['flip-y'])){
+		//if(mt_rand(0,1) == 1){
+			$x = $x / -1;
+		//}
     }
-    if(mt_rand(0,1) == 1){
-        $x = $x / -1;
-    }
-    
+	
+	
     // randomly shift to half
-    if(mt_rand(0,1) == 1){
-        // position is in 
-        if($y + $y/2 > $img_size){
-            $y -= $y/2;
-        }else{
-            $y += $y/2;
-        }
-    }
-    if(mt_rand(0,1) == 1){
-        // position is in 
-        if($x + $x/2 > $img_size){
-            $x -= $x/2;
-        }else{
-            $x += $x/2;
-        }
-    }
+	if(isset($_POST['shift-y'])){
+		//if(mt_rand(0,1) == 1){
+			// position is in 
+			if($y + $y/2 > $img_size){
+				$y -= $y/2;
+			}else{
+				$y += $y/2;
+			}
+		//}
+	}
+	if(isset($_POST['shift-x'])){
+		//if(mt_rand(0,1) == 1){
+			// position is in 
+			if($x + $x/2 > $img_size){
+				$x -= $x/2;
+			}else{
+				$x += $x/2;
+			}
+		//}
+	}
 
     $r = sqrt(pow($x,2) + pow($y,2)); // Orbital radius at this position
     $a =  ($au_from_sun * 0.00002) / pow($r, 2);
@@ -186,21 +207,23 @@ for($i = 0; $i < $simulations; $i++){
     @imagefilledellipse ( $system, $sun_y, $sun_x, $sun_size, $sun_size, $sun_yellow );
     
     foreach($planets as $key=>&$planet){
+		
+		
         if($planet['plot'] == true){
             ////
             // Planet
             ////
-            $planet['vx'] = $planet['vx'] + $planet['ax'] * $delta_time; // New velocity
-            $planet['vy'] = $planet['vy'] + $planet['ay'] * $delta_time; // New velocity
-            $planet['x'] = $planet['x'] + $planet['vx'] * $delta_time; // New position
-            $planet['y'] = $planet['y'] + $planet['vy'] * $delta_time; // New position
-            $planet['r'] = sqrt(pow($planet['x'],2) + pow($planet['y'],2)); // Orbital radius at this position
-            $planet['a'] =  $planet['au'] / pow($planet['r'], 2); // Acceleration / angle
-            $planet['ax'] = -$planet['a'] * $planet['x'] / $planet['r']; // Divide the force for the angle between x & y
-            $planet['ay'] = -$planet['a'] * $planet['y'] / $planet['r']; // Divide the force for the angle between x & y
+            @$planet['vx'] = $planet['vx'] + $planet['ax'] * $delta_time; // New velocity
+            @$planet['vy'] = $planet['vy'] + $planet['ay'] * $delta_time; // New velocity
+            @$planet['x'] = $planet['x'] + $planet['vx'] * $delta_time; // New position
+            @$planet['y'] = $planet['y'] + $planet['vy'] * $delta_time; // New position
+            @$planet['r'] = sqrt(pow($planet['x'],2) + pow($planet['y'],2)); // Orbital radius at this position
+            @$planet['a'] =  $planet['au'] / pow($planet['r'], 2); // Acceleration / angle
+            @$planet['ax'] = -$planet['a'] * $planet['x'] / $planet['r']; // Divide the force for the angle between x & y
+            @$planet['ay'] = -$planet['a'] * $planet['y'] / $planet['r']; // Divide the force for the angle between x & y
             // Normalize positions to be within the image bounds
-            $planet['row'] = MinMax($planet['y'], $low, $high, $img_size);
-            $planet['col'] = MinMax($planet['x'], $low, $high, $img_size);
+            @$planet['row'] = MinMax($planet['y'], $low, $high, $img_size);
+            @$planet['col'] = MinMax($planet['x'], $low, $high, $img_size);
             // Plot Planet
             @imagefilledellipse ($system, $planet['row'], $planet['col'], $planet['size'], $planet['size'], $planet['color']);
             
@@ -244,6 +267,7 @@ for($i = 0; $i < $simulations; $i++){
                 if($planet2['plot'] == true){
                     if($key != $key2){ // that are not this planet
                         
+						
                         // deturmine the larger of the two
                         if($planet['size'] > $planet2['size']){ // planet is bigger than planet 2
                             
@@ -296,10 +320,11 @@ for($i = 0; $i < $simulations; $i++){
     imagedestroy($system);
 }
 
-include('GIFEncoder.class.php'); // GIFEncoder class
-$images;
-$buffered;
-@CreateGif($simulations);
+
+	include('GIFEncoder.class.php'); // GIFEncoder class
+	$images;
+	$buffered;
+	@CreateGif($simulations);
 
 
 ?>
@@ -319,7 +344,7 @@ $buffered;
             <form id="solar-system-generator" action="#" method="POST">
             
                 <label for="exponent">Solar System Size <span id="exponent-number"><?php echo $exponent . ' (' . $img_size . 'x' . $img_size .')'; ?></span></label>    
-                <input type="range" id="exponent" name="exponent" min="8" max="10" value="<?php echo $exponent; ?>" onchange="SettingsSliderChange(this.id)"><br>
+                <input type="range" id="exponent" name="exponent" min="8" max="12" value="<?php echo $exponent; ?>" onchange="SettingsSliderChange(this.id)"><br>
                 
                 <label for="zoom">Zoom</label>    
                 <select id="zoom" name="zoom">
@@ -333,11 +358,21 @@ $buffered;
                 </select>
                 
                 
-                <label for="epocs">Epocs <span id="epocs-number"><?php echo $simulations; ?></span></label>    
-                <input type="range" id="epocs" name="epocs" min="10" max="1500" value="<?php echo $simulations; ?>" onchange="SettingsSliderChange(this.id)"><br>
+                <label for="epochs">Epochs <span id="epochs-number"><?php echo $simulations; ?></span></label>    
+                <input type="range" id="epochs" name="epochs" min="10" max="10000" value="<?php echo $simulations; ?>" onchange="SettingsSliderChange(this.id)"><br>
                 
                 <label for="number-of-bodies">Number of Bodies <span id="number-of-bodies-number"><?php echo $number_of_orbital_bodies; ?></span></label>    
-                <input type="range" id="number-of-bodies" name="number-of-bodies" min="3" max="1000" value="<?php echo $number_of_orbital_bodies; ?>" onchange="SettingsSliderChange(this.id)"><br>
+                <input type="range" id="number-of-bodies" name="number-of-bodies" min="3" max="6000" value="<?php echo $number_of_orbital_bodies; ?>" onchange="SettingsSliderChange(this.id)"><br>
+				
+				<label for="flip-x">Flip X</label>   
+				<input type="checkbox" name="flip-x" value="1" <?php if(isset($_POST['flip-x'])){ echo 'checked';} ?>>
+				<label for="flip-x">Flip Y</label>   
+				<input type="checkbox" name="flip-y" value="1" <?php if(isset($_POST['flip-y'])){ echo 'checked';} ?>>
+				<label for="flip-x">Shift X</label>   
+				<input type="checkbox" name="shift-x" value="1" <?php if(isset($_POST['shift-x'])){ echo 'checked';} ?>>
+				<label for="flip-x">Shift Y</label>
+				<input type="checkbox" name="shift-y" value="1" <?php if(isset($_POST['shift-y'])){ echo 'checked';} ?>>
+								
                 
                 <input type="submit" value="Generate">
             </form>
