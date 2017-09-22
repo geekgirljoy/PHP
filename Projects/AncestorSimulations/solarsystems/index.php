@@ -1,5 +1,13 @@
 <?php
-set_time_limit(3000); // Adjust as needed
+
+// Turn off all error reporting because
+// sometimes we will divide by zero...
+// we want this to be OK and therefor
+// keep on trucking! (http://www.urbandictionary.com/define.php?term=keep%20on%20trucking)
+error_reporting(0);
+
+
+set_time_limit(86400); // 24 Hours Adjust as needed
 
 
 function MinMax($value, $min, $max, $size){
@@ -73,6 +81,30 @@ $low = $high * -1;
 
 
 
+
+if(isset($_POST['enable-elemental-simulation'])){
+	////
+	// Meet the elements
+	////
+	$chemical_elements = array('Hydrogen', 'Helium', 'Lithium', 'Beryllium', 'Boron', 'Carbon', 'Nitrogen', 'Oxygen', 'Fluorine', 'Neon', 'Sodium', 'Magnesium', 'Aluminium', 'Silicon', 'Phosphorus', 'Sulfur', 'Chlorine', 'Argon', 'Potassium', 'Calcium', 'Scandium', 'Titanium', 'Vanadium', 'Chromium', 'Manganese', 'Iron', 'Cobalt', 'Nickel', 'Copper', 'Zinc', 'Gallium', 'Germanium', 'Arsenic', 'Selenium', 'Bromine', 'Krypton', 'Rubidium', 'Strontium', 'Yttrium', 'Zirconium', 'Niobium', 'Molybdenum', 'Technetium', 'Ruthenium', 'Rhodium', 'Palladium', 'Silver', 'Cadmium', 'Indium', 'Tin', 'Antimony', 'Tellurium', 'Iodine', 'Xenon', 'Caesium', 'Barium', 'Lanthanum', 'Cerium', 'Praseodymium', 'Neodymium', 'Promethium', 'Samarium', 'Europium', 'Gadolinium', 'Terbium', 'Dysprosium', 'Holmium', 'Erbium', 'Thulium', 'Ytterbium', 'Lutetium', 'Hafnium', 'Tantalum', 'Tungsten', 'Rhenium', 'Osmium', 'Iridium', 'Platinum', 'Gold', 'Mercury', 'Thallium', 'Lead', 'Bismuth', 'Polonium', 'Astatine', 'Radon', 'Francium', 'Radium', 'Actinium', 'Thorium', 'Protactinium', 'Uranium', 'Neptunium', 'Plutonium', 'Americium', 'Curium', 'Berkelium', 'Californium', 'Einsteinium', 'Fermium', 'Mendelevium', 'Nobelium', 'Lawrencium', 'Rutherfordium', 'Dubnium', 'Seaborgium', 'Bohrium', 'Hassium', 'Meitnerium', 'Darmstadtium', 'Roentgenium', 'Copernicium', 'Nihonium', 'Flerovium', 'Moscovium', 'Livermorium', 'Tennessine', 'Oganesson');
+
+	// initialize unique element spawn probability "weights" for this solar system
+	$element_weights = array();
+	$number_of_elements = count($chemical_elements); // count the elements
+	for($i = 0; $i < $number_of_elements; $i++){
+		array_push($element_weights, mt_rand(0, $number_of_elements));
+	}
+	// combine the element names as keys and the weights as values
+	$chemical_elements = array_combine($chemical_elements, $element_weights);
+}
+
+
+
+
+
+
+
+
 ////
 // Create Solar System
 ////
@@ -87,24 +119,39 @@ else{$number_of_orbital_bodies = 9;}
 
 
 
+//////////////////////////////////////////////////////////
+// Set to use via command line
+//////////////////////////////////////////////////////////
+$exponent = 10;
+$img_size = pow(2, $exponent) + 1;
+$high = 24;
+$low = $high * -1;
+$simulations = 1;
+$number_of_orbital_bodies = 128;
+
+/////////////////////////////////////////////////////////
+
+
+
 
 $system = imagecreatetruecolor($img_size, $img_size);
 $space_black = imagecolorallocate($system, 0, 0, 0);
 
 
+
+
+
+
 ////
 // Define Sun
 ////
-$sun_size=mt_rand(8,30); // Size
+//$sun_size=mt_rand(8,30); // Size
+$sun_size = 75; // Size ////////////////////////////////////////////////////////////////////////////
 $sun_x = $img_size/2; // center the sun on x
 $sun_y = $img_size/2; // center the sun on y
 $sun_yellow = imagecolorallocate($system, 255, 255, 0); // Color
-@imagefilledellipse ( $system, $sun_y, $sun_x, $sun_size, $sun_size, $sun_yellow);
-
 
 $planets = array();
-
-
 
 // generate system
 for($i = 0; $i < $number_of_orbital_bodies; $i++){
@@ -115,7 +162,7 @@ for($i = 0; $i < $number_of_orbital_bodies; $i++){
     ////
     $au_from_sun=RandomFloat(1+$i); // AU from Sun
     //$size=RandomFloat(8); // Size
-    $size=RandomFloat(3); // Size
+    $size=RandomFloat(0); // Size
     $color = imagecolorallocate($system, mt_rand(50, 255), mt_rand(50, 255), mt_rand(50, 255)); // Color
     //$vy = RandomFloat(1); // Velocity
     $vy = 1; // Velocity
@@ -166,9 +213,35 @@ for($i = 0; $i < $number_of_orbital_bodies; $i++){
     // Normalize positions to be within the image bounds
     $row = round(MinMax($y, $low, $high, $img_size));
     $col = round(MinMax($x, $low, $high, $img_size));
-        
+       
+	$body_elements = array();
+	if(isset($_POST['enable-elemental-simulation']) && $_POST['enable-elemental-simulation'] == true){
+		// Add Elements
+		$number_of_elements_to_spawn = mt_rand(10,15);
+		for($elem = 0; $elem < $number_of_elements_to_spawn; $elem++){
+
+			//select an element
+			$select_element = mt_rand(1,array_sum($chemical_elements));
+
+			// Find the selected element
+			$num = 0;
+			foreach($chemical_elements as $value=>$weight){
+				if(($num += $weight) >= $select_element){
+					//echo "$weight $value" . PHP_EOL;
+					
+					// push element onto the orbital body
+					array_push($body_elements, $value);
+					break;
+				}
+			}
+		}
+	}
+		
+		
+		
+		
     // plot planet
-    @imagefilledellipse ( $system, $row, $col, $size, $size, $color);
+    imagefilledellipse ( $system, $row, $col, $size, $size, $color);
     
     array_push($planets, array(
        'au'=>$au_from_sun,
@@ -184,8 +257,143 @@ for($i = 0; $i < $number_of_orbital_bodies; $i++){
        'ay'=>$ay,
        'row'=>$row,
        'col'=>$col,
-       'plot'=>true));
+       'plot'=>true,
+	   'motion'=>true, 
+	   'elements'=>$body_elements
+	   ));
 }
+
+
+
+
+
+
+
+ if(isset($_POST['enable-solar-nebula'])){ 
+
+	$a = 0.9759 + RandomFloat(0);
+	$b = 0.1759;
+	$steps = 7; 
+	$radius = 0.8 * pi()* $steps;
+	$max_spread = 0.7;
+	$lower_disk_radius = -6;
+	$higher_disk_radius = 6;
+    
+	
+	for($i = 0; $i < 200000; $i++){
+
+		// Nebula
+		
+		// Debris size
+		$size = mt_rand(0,6);
+		if($size == 0){
+			$size = "0.0" . mt_rand(1,9); // 31.855 Kilometers - 286.695 Kilometers in Diameter
+		}                                 // 19.7937793 Miles - 178.144014 Miles in Diameter
+		
+		elseif($size == 1){
+			$size = "0.00" . mt_rand(1,9); // 3.1855 Kilometers - 28.6695 Kilometers in Diameter
+		}                                  // 1.97937793 Miles - 17.8144014 Miles in Diameter
+		
+		elseif($size == 2){ 
+			$size = "0.000" . mt_rand(1,9); // 318.55 Meters - 2.86695 Kilometers in Diameter
+		}                                   // 348.370516208 Yards - 1.78144014 Miles in Diameter
+		
+		elseif($size == 3){
+			$size = "0.0000" . mt_rand(1,9); // 31.855 Meters - 286.695 Meters in Diameter
+		}                                    // 34.837051619 Yards - 313.53346457 Yards in Diameter
+		
+		elseif($size == 4){
+			$size = "0.00000" . mt_rand(1,9); // 3.1855 Meters - 28.6695 Meters in Diameter
+		}                                     // 3.48370516185 Yards - 31.3533464567 Yards in Diameter
+		
+		elseif($size == 5){
+			$size = "0.000000" . mt_rand(1,9); // 0.00031855 - 0.00286695 Kilometers in Diameter
+		}                                      // 1.04511155 Feet - 9.406003937008 Feet in Diameter
+
+		elseif($size == 6){
+			$size = "0.0000000" . mt_rand(1,9); // 3.1855 Centimeters - 28.6695 Centimeters in Diameter
+		}                                       // 1.25413386 Inches - 11.28720472 Inches in Diameter
+		
+
+		
+		
+		
+		  $angle = $radius * RandomFloat(3); // Pick a random point in the Spiral
+		  $row = $a * exp($b * $angle) * cos($angle);
+		  $row = $row + ($max_spread * $row * RandomFloat(0)) - ($max_spread * $row * RandomFloat(0));
+		  $col = $a * exp($b * $angle) * sin($angle); 
+		  $col = $col + ($max_spread * $col * RandomFloat(0)) - ($max_spread * $col * RandomFloat(0));
+
+		  // Flip a coin to determine which arm 
+		  // the star should be on.
+		  if (mt_rand(0, 1) == 1){
+			  // if heads put it on the second arm
+			  // by inverting the values
+			  $row = ($row/-1);
+			  $col = ($col/-1);
+		  } 
+
+		  // Normalize positions to be within the image bounds
+		  $row = MinMax($row, $lower_disk_radius, $higher_disk_radius, $img_size);
+		  $col = MinMax($col, $lower_disk_radius, $higher_disk_radius, $img_size);
+
+		  
+		$body_elements = array();
+		if(isset($_POST['enable-elemental-simulation']) && $_POST['enable-elemental-simulation'] == true){
+			// Add Elements
+			$number_of_elements_to_spawn = mt_rand(1,3);
+			for($elem = 0; $elem < $number_of_elements_to_spawn; $elem++){
+
+				//select an element
+				$select_element = mt_rand(1,array_sum($chemical_elements));
+
+				// Find the selected element
+				$num = 0;
+				foreach($chemical_elements as $value=>$weight){
+					if(($num += $weight) >= $select_element){
+						//echo "$weight $value" . PHP_EOL;
+						
+						// push element onto the orbital body
+						array_push($body_elements, $value);
+						break;
+					}
+				}
+			}
+		}
+		
+		$color = imagecolorallocate($system, mt_rand(10, 50), mt_rand(10, 50), mt_rand(10, 50));
+		imagefilledellipse ( $system, round($row), round($col), (float)$size, (float)$size, $color);
+		
+		
+		array_push($planets, array(
+	   'au'=>$row+$col,
+	   'size'=>$size,
+	   'color'=>$color,
+	   'vy'=>0,
+	   'vx'=>0,
+	   'x'=>$col,
+	   'y'=>$row,
+	   'r'=>$radius,
+	   'a'=>$angle,
+	   'ax'=>0,
+	   'ay'=>0,
+	   'row'=>$row,
+	   'col'=>$col,
+	   'plot'=>true,
+	   'motion'=>false,
+	   'elements'=>$body_elements 
+	   ));
+
+	}
+ }
+
+
+
+// Draw Sun
+imagefilledellipse ( $system, $sun_y, $sun_x, $sun_size, $sun_size, $sun_yellow);
+
+
+
 
 
 // Output image
@@ -200,32 +408,31 @@ for($i = 0; $i < $simulations; $i++){
     ////
     $system = imagecreatetruecolor($img_size, $img_size);
     
-    ////
-    // Sun
-    ////
-    // Plot Sun
-    @imagefilledellipse ( $system, $sun_y, $sun_x, $sun_size, $sun_size, $sun_yellow );
-    
+      
     foreach($planets as $key=>&$planet){
 		
 		
-        if($planet['plot'] == true){
+        if($planet['plot'] == true && $planet['motion'] != false){
             ////
             // Planet
             ////
-            @$planet['vx'] = $planet['vx'] + $planet['ax'] * $delta_time; // New velocity
-            @$planet['vy'] = $planet['vy'] + $planet['ay'] * $delta_time; // New velocity
-            @$planet['x'] = $planet['x'] + $planet['vx'] * $delta_time; // New position
-            @$planet['y'] = $planet['y'] + $planet['vy'] * $delta_time; // New position
-            @$planet['r'] = sqrt(pow($planet['x'],2) + pow($planet['y'],2)); // Orbital radius at this position
-            @$planet['a'] =  $planet['au'] / pow($planet['r'], 2); // Acceleration / angle
-            @$planet['ax'] = -$planet['a'] * $planet['x'] / $planet['r']; // Divide the force for the angle between x & y
-            @$planet['ay'] = -$planet['a'] * $planet['y'] / $planet['r']; // Divide the force for the angle between x & y
+
+            $planet['vx'] = $planet['vx'] + $planet['ax'] * $delta_time; // New velocity
+            $planet['vy'] = $planet['vy'] + $planet['ay'] * $delta_time; // New velocity
+			
+            $planet['x'] = $planet['x'] + $planet['vx'] * $delta_time; // New position
+            $planet['y'] = $planet['y'] + $planet['vy'] * $delta_time; // New position
+            $planet['r'] = sqrt(pow($planet['x'],2) + pow($planet['y'],2)); // Orbital radius at this position
+            $planet['a'] =  $planet['au'] / pow($planet['r'], 2); // Acceleration / angle
+            $planet['ax'] = -$planet['a'] * $planet['x'] / $planet['r']; // Divide the force for the angle between x & y
+            $planet['ay'] = -$planet['a'] * $planet['y'] / $planet['r']; // Divide the force for the angle between x & y
             // Normalize positions to be within the image bounds
-            @$planet['row'] = MinMax($planet['y'], $low, $high, $img_size);
-            @$planet['col'] = MinMax($planet['x'], $low, $high, $img_size);
+            $planet['row'] = MinMax($planet['y'], $low, $high, $img_size);
+            $planet['col'] = MinMax($planet['x'], $low, $high, $img_size);
+			
+			
             // Plot Planet
-            @imagefilledellipse ($system, $planet['row'], $planet['col'], $planet['size'], $planet['size'], $planet['color']);
+            imagefilledellipse ($system, $planet['row'], $planet['col'], $planet['size'], $planet['size'], $planet['color']);
             
             // planet went out of bounds
             /*
@@ -286,6 +493,12 @@ for($i = 0; $i < $simulations; $i++){
 								
 								// Planet may not be larger than our arbitrarily sized sun
                                 if ($planet['size'] > $sun_size){$planet['size'] = $sun_size; }
+								
+								if(isset($_POST['enable-elemental-simulation']) && $_POST['enable-elemental-simulation'] == true){
+									// transfer elements
+									$planet['elements'] = array_merge($planet['elements'], $planet2['elements']);
+									$planet2['elements'] = null; // free up space in array
+				                }
 
                             }
                         }else{// planet2 is bigger than planet 1
@@ -306,13 +519,32 @@ for($i = 0; $i < $simulations; $i++){
                                 
 								// Planet may not be larger than our arbitrarily sized sun
                                 if ($planet2['size'] > $sun_size){$planet2['size'] = $sun_size; }
+								
+								if(isset($_POST['enable-elemental-simulation']) && $_POST['enable-elemental-simulation'] == true){
+									// transfer elements
+									$planet2['elements'] = array_merge($planet2['elements'], $planet['elements']);
+									$planet['elements'] = null; // free up space in array
+								}
                             }
                         }
                     }
                 }
             }
         }
+		 // motion = false
+		 // this is stationary mass
+		elseif($planet['plot'] == true){ // motion = false
+		     imagefilledellipse ($system, $planet['row'], $planet['col'], $planet['size'], $planet['size'], $planet['color']);
+		}
     }
+	
+	////
+    // Sun
+    ////
+    // Plot Sun
+    imagefilledellipse ( $system, $sun_y, $sun_x, $sun_size, $sun_size, $sun_yellow );
+	
+	
     
     // Output Solar System
     imagepng($system, "images/" . ($i + 1) . ".png");
@@ -321,10 +553,14 @@ for($i = 0; $i < $simulations; $i++){
 }
 
 
+if(isset($_POST['output-gif'])){ 
+
 	include('GIFEncoder.class.php'); // GIFEncoder class
 	$images;
 	$buffered;
-	@CreateGif($simulations);
+	CreateGif($simulations);
+}
+
 
 
 ?>
@@ -362,7 +598,13 @@ for($i = 0; $i < $simulations; $i++){
                 <input type="range" id="epochs" name="epochs" min="10" max="10000" value="<?php echo $simulations; ?>" onchange="SettingsSliderChange(this.id)"><br>
                 
                 <label for="number-of-bodies">Number of Bodies <span id="number-of-bodies-number"><?php echo $number_of_orbital_bodies; ?></span></label>    
-                <input type="range" id="number-of-bodies" name="number-of-bodies" min="3" max="6000" value="<?php echo $number_of_orbital_bodies; ?>" onchange="SettingsSliderChange(this.id)"><br>
+                <input type="range" id="number-of-bodies" name="number-of-bodies" min="3" max="6000" value="<?php echo $number_of_orbital_bodies; ?>" onchange="SettingsSliderChange(this.id)"><br><br>
+				
+				<label for="enable-solar-nebula">Generate Solar Nebula</label>
+				<input type="checkbox" name="enable-solar-nebula" value="1" <?php if(isset($_POST['enable-solar-nebula'])){ echo 'checked';} ?>><br><br>
+				
+				<label for="enable-solar-nebula">Enable Elemental Simulation</label>
+				<input type="checkbox" name="enable-elemental-simulation" value="1" <?php if(isset($_POST['enable-elemental-simulation'])){ echo 'checked';} ?>><br><br>
 				
 				<label for="flip-x">Flip X</label>   
 				<input type="checkbox" name="flip-x" value="1" <?php if(isset($_POST['flip-x'])){ echo 'checked';} ?>>
@@ -372,7 +614,16 @@ for($i = 0; $i < $simulations; $i++){
 				<input type="checkbox" name="shift-x" value="1" <?php if(isset($_POST['shift-x'])){ echo 'checked';} ?>>
 				<label for="flip-x">Shift Y</label>
 				<input type="checkbox" name="shift-y" value="1" <?php if(isset($_POST['shift-y'])){ echo 'checked';} ?>>
-								
+				
+				
+
+				<br><br>
+				<label for="output-gif">Output GIF</label>
+				<input type="checkbox" name="output-gif" value="1" <?php if(isset($_POST['output-gif'])){ echo 'checked';} ?>>
+				
+				
+				
+				
                 
                 <input type="submit" value="Generate">
             </form>
@@ -401,14 +652,44 @@ for($i = 0; $i < $simulations; $i++){
         <img src="orbit.gif" alt="orbit">
         <hr>
         <?php
+		/////////////
+		// Report
+		/////////////
+		
             $remaining_orbits = 0;
-
-            foreach($planets as &$planet){
+			
+			$report = "";
+			
+            //$file = fopen("elements.txt", "w");
+            foreach($planets as  $key=>&$planet){
+				
                 if($planet['plot'] == true){
                     $remaining_orbits++; 
                 }
+				
+				if($planet['plot'] == true && $planet['motion'] != false){
+					$report .= "Planet " . $key  . " Elements <br>" . PHP_EOL;
+					$E = array_count_values($planet['elements']);
+					
+					$report .= "Number of Elements Present: " . count($E) . "<br>" .PHP_EOL;
+					
+					 foreach($E as  $elem=>&$ekey){
+						 $report .= ($ekey / count($E) * 100) . "% $elem<br>" . PHP_EOL;
+						// fwrite($file, ($ekey / count($E) * 100) . "% $elem<br>" . PHP_EOL);
+					 }
+					
+					
+					//print_r($E);
+					$report .= "<br><br>" . PHP_EOL;
+
+				}
+				
             }
-            echo "$remaining_orbits Remaining Orbits ";
+			//fclose($file);
+            echo "$remaining_orbits Remaining Objects <br> $report";
+
+			
+			
         ?>
     </body>
 </html>
