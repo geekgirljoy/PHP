@@ -1,4 +1,5 @@
 <?php
+// !IMPORTANT! Manually Pull/Create your repo before using this script
 
 // This script assumes that you keep your repos in your 
 // user folder in a folder called repos.
