@@ -1,3 +1,5 @@
+<?php
+
 // return random float between -1.0 & 1.0
 function RandomFloat(){
    $value = mt_rand( -100, 100 ) / 100;
