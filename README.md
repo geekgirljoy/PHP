@@ -67,6 +67,7 @@ This folder contains stand alone code. Each does something different and is here
 ###### [FindTheLongestWordInAString.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/FindTheLongestWordInAString.php)
 ###### [FunctionalTemplatingHTML5.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/FunctionalTemplatingHTML5.php)
 ###### [GeneratePrimeNumbers.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/GeneratePrimeNumbers.php)
+###### [Invert.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/Invert.php)
 ###### [Mutations.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/Mutations.php)
 ###### [PersonClass.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/PersonClass.php)
 ###### [PlaceholderImageGenerator.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/PlaceholderImageGenerator.php)
