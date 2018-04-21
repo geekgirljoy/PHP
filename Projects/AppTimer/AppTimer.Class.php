@@ -16,7 +16,7 @@ class AppTimer
     private $report = NULL;  
     
 
-    /*/////////////////////////////////////////////////////////*/
+        /*/////////////////////////////////////////////////////////*/
 	/* Constructor                                             */
 	/*                                                         */
 	/* Set $AutoStart to 1 or true to begin timer at creation  */
@@ -124,7 +124,9 @@ class AppTimer
 		return $this->report;
 	}
 	
-	
+	/*///////////////////////////////////////////////////*/
+	/* CallbackTimer()                                   */
+	/*///////////////////////////////////////////////////*/
 	function CallbackTimer($callback = NULL, $arguments = array()){
 				
 		// if callback is array then it is object & method			
@@ -150,7 +152,9 @@ class AppTimer
 	}
 	
 	
-	
+	/*///////////////////////////////////////////////////*/
+	/* GetTime()                                         */
+	/*///////////////////////////////////////////////////*/
 	function GetTime($duration_seconds){
 		
 		$this->start = 1;
