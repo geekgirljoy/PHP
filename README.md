@@ -45,6 +45,23 @@ ___
 
 ___
 
+###### [AppTimer](Projects/AppTimer)
+
+[AppTimer.Class.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/AppTimer/AppTimer.Class.php)
+
+[BasicExample.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/AppTimer/BasicExample.php)
+
+[AutoStartAndReportExample.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/AppTimer/AutoStartAndReportExample.php)
+
+[FunctionCallbackExample.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/AppTimer/FunctionCallbackExample.php)
+
+[ObjectMethodCallbackExample.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/AppTimer/ObjectMethodCallbackExample.php)
+
+[GetTimeExample.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/AppTimer/GetTimeExample.php)
+
+___
+
+
 ## Loose Code
 This folder contains stand alone code. Each does something different and is here because I want a backup of this code for any number of reasons.                                
 ###### [AreaOfACylinder.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/AreaOfACylinder.php)
