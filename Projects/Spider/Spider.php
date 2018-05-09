@@ -1,5 +1,4 @@
 <?php
-<?php
 // Instructions:
 // Update the $url_array with the pages you want to crawl then run from command line.
 
