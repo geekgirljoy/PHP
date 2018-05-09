@@ -29,7 +29,7 @@ $url_array = array('http://www.sitename.com/page1.html',
 foreach($url_array  as $key=>$page){
 
     // Do Crawl	
-	echo  'Crawling (' . $key . ' of ' . count($url_array) . ')' . $page . PHP_EOL;
+    echo  'Crawling (' . $key . ' of ' . count($url_array) . ')' . $page . PHP_EOL;
     $data = file_get_contents($page);
  
     // Save a clone of the crawled page in the crawled subfolder 
@@ -42,13 +42,13 @@ foreach($url_array  as $key=>$page){
     // It makes it look like you are spending a few minutes reading each
     // page like a person would. It keeps the spider from using excessive
     // resources which will get you blacklisted.
-	$sleep = mt_rand(150, 300); // Between 2.5 & 5 Minutes
-	echo 'Sleeping for ' . $sleep . PHP_EOL;
-	while($sleep > 0){
+    $sleep = mt_rand(150, 300); // Between 2.5 & 5 Minutes
+    echo 'Sleeping for ' . $sleep . PHP_EOL;
+    while($sleep > 0){
 		sleep(1);
 		$sleep-=1; // take one second away
 		echo $sleep . ' seconds until next crawl.' . PHP_EOL;
-	}
+    }
 }
 
 echo 'Program Complete'  . PHP_EOL;
