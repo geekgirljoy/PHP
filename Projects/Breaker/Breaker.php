@@ -57,10 +57,7 @@ class Breaker{
 	}
 
 	function Match($hash, $test_password){
-		
-		$test_hash = $test_password; // HASH $test_password here 
-		
-		if($test_hash == $hash){
+		if($test_password == $hash){
 		  return true;
 		}
 		return false;
@@ -76,8 +73,7 @@ $Timer = new AppTimer();           // Create Timer
 $Timer->Start();                   // Start() Timer
 
 
-$password_to_break = 'Cat'; // Change this to the password hash 
-                            // you want to break once you add hashing
+$password_to_break = 'Cat'; 
 
 // Concatenate all symbols explicitly
 //$valid_symbols = "!\"#$%&'()*+,-./0123456789:;<=>?@"; // note the escaped double quote
