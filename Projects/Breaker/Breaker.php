@@ -18,50 +18,50 @@ set_time_limit(0); // Disable the time limit on script execution
 // CHOOSE TO ENGAGE IN OUTSIDE OF AN EDUCATIONAL SETTING ARE YOUR OWN! 
 class Breaker{
 
-	function GetSymbols($values, &$symbols){
-		foreach($values as $key=>&$value){
-			if(isset($symbols[$value])){
-				$value = $symbols[$value];
-			}
-		}
-		return $values;
-	}
+    function GetSymbols($values, &$symbols){
+        foreach($values as $key=>&$value){
+            if(isset($symbols[$value])){
+                $value = $symbols[$value];
+            }
+        }
+        return $values;
+    }
 
-	function IncrementValues($values, $number_of_valid_symbols){
-		foreach($values as $key=>&$value){
-			// If this value is maxed
-			if($values[$key] >= $number_of_valid_symbols){
-				// Reset it to 0 and increment the next value
-				$values[$key] = 0; // Reset this value
-				if(!isset($values[$key+1])){
-					$values[$key+1] = '0';
-				}else{
-					$values[$key+1]++; // Reset this value
-				}
-			}
-			else{
-				// If key greater than 0
-				if($key > 0){
-					if($values[$key-1]>$number_of_valid_symbols){
-						// Increment this value
-						$values[$key]++;
-					}
-				}
-				else{
-					// Always Increment this value
-					$values[$key]++;
-				}
-			}			
-		}
-		return $values;
-	}
+    function IncrementValues($values, $number_of_valid_symbols){
+        foreach($values as $key=>&$value){
+            // If this value is maxed
+            if($values[$key] >= $number_of_valid_symbols){
+                // Reset it to 0 and increment the next value
+                $values[$key] = 0; // Reset this value
+                if(!isset($values[$key+1])){
+                    $values[$key+1] = '0';
+                }else{
+                    $values[$key+1]++; // Reset this value
+                }
+            }
+            else{
+                // If key greater than 0
+                if($key > 0){
+                    if($values[$key-1]>$number_of_valid_symbols){
+                        // Increment this value
+                        $values[$key]++;
+                    }
+                }
+                else{
+                    // Always Increment this value
+                    $values[$key]++;
+                }
+            }            
+        }
+        return $values;
+    }
 
-	function Match($hash, $test_password){
-		if($test_password == $hash){
-		  return true;
-		}
-		return false;
-	}
+    function Match($hash, $test_password){
+        if($test_password == $hash){
+          return true;
+        }
+        return false;
+    }
 
 }
 
@@ -96,13 +96,13 @@ $PlainTextPasswordBreaker = new Breaker();
 $test_password = $PlainTextPasswordBreaker->GetSymbols($values, $valid_symbols);
 
 while(!$PlainTextPasswordBreaker->Match($password_to_break, $test_password)){
-	// We have not found the correct password so keep trying to generate it
-	$values = $temp = $PlainTextPasswordBreaker->IncrementValues($values, $number_of_valid_symbols);
-	$temp = $PlainTextPasswordBreaker->GetSymbols($values, $valid_symbols);
-	$test_password = strrev(implode('', $temp));
-	
-	//echo $test_password . PHP_EOL; // Uncomment to watch breaker
-	                               // Will make Breaker much slower
+    // We have not found the correct password so keep trying to generate it
+    $values = $temp = $PlainTextPasswordBreaker->IncrementValues($values, $number_of_valid_symbols);
+    $temp = $PlainTextPasswordBreaker->GetSymbols($values, $valid_symbols);
+    $test_password = strrev(implode('', $temp));
+    
+    //echo $test_password . PHP_EOL; // Uncomment to watch breaker
+                                   // Will make Breaker much slower
 }
 
 
