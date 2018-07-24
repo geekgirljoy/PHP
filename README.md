@@ -38,6 +38,12 @@ Magic 8 Ball is a browser based implementation of a "magic 8 ball". This project
 
 ___
 
+###### [Breaker](Projects/Breaker)
+This tool is a demonstration of a "brute force" password breaker. This prototype is provided AS IS and for informational & educational purposes only! 
+[Breaker.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/Breaker/Breaker.php)
+
+___
+
 ###### [SierpinskiTriangle](Projects/SierpinskiTriangle)
 
 [SierpinskiTriangle.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/SierpinskiTriangle/SierpinskiTriangle.php) & 
@@ -58,12 +64,6 @@ ___
 [ObjectMethodCallbackExample.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/AppTimer/ObjectMethodCallbackExample.php)
 
 [GetTimeExample.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/AppTimer/GetTimeExample.php)
-
-___
-
-###### [Breaker](Projects/Breaker)
-
-[Breaker.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/Breaker/Breaker.php)
 
 ___
 
