@@ -18,8 +18,9 @@ set_time_limit(0); // Disable the time limit on script execution
 // CHOOSE TO ENGAGE IN OUTSIDE OF AN EDUCATIONAL SETTING ARE YOUR OWN! 
 class Breaker{
 
-    function GetSymbols($values, &$symbols){
-        foreach($values as $key=>&$value){
+    
+    function GetSymbols($values, $symbols){
+        foreach($values as &$value){
             if(isset($symbols[$value])){
                 $value = $symbols[$value];
             }
