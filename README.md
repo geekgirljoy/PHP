@@ -69,7 +69,9 @@ ___
 
 
 ## Loose Code
-This folder contains stand alone code. Each does something different and is here because I want a backup of this code for any number of reasons.                                
+This folder contains stand alone code. Each does something different and is here because I want a backup of this code for any number of reasons.         
+
+###### [AlienNameGenerator.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/AlienNameGenerator.php)
 ###### [AreaOfACylinder.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/AreaOfACylinder.php)
 ###### [AreaOfATriangle.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/AreaOfATriangle.php)
 ###### [AssociativeArray.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/AssociativeArray.php)
