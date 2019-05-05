@@ -17,9 +17,7 @@ function SplitRGBChannels(&$img){
 		
 	// for all the rows and columns in the input image
 	for($row = 0; $row < $width; $row++){
-		for($col = 0; $col < $height; $col++){
-			
-			
+		for($col = 0; $col < $height; $col++){			
 			$pixel = ImageColorAt($img, $row, $col); // get the color for the pixel 
 			$colors = ImageColorsForIndex($img, $pixel); // make human readable 
              
