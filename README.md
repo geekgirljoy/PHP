@@ -67,6 +67,9 @@ ___
 
 ___
 
+###### [SplitRGB](Projects/SplitRGBChannels)
+How to use the PHP & the GD lib to split RGB "TrueColor" images into seperated RGB monochrome images.
+___
 
 ## Loose Code
 This folder contains stand alone code. Each does something different and is here because I want a backup of this code for any number of reasons.         
