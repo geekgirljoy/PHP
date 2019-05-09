@@ -112,6 +112,7 @@ This folder contains stand alone code. Each does something different and is here
 ###### [TitleCaseASentence.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/TitleCaseASentence.php)
 ###### [TrainFANNNeuralNetworkFromMySQL.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/TrainFANNNeuralNetworkFromMySQL.php)
 ###### [TruncateAString.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/TruncateAString.php)
-
+###### [WebColorToRGBA.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/WebColorToRGBA.php)
+ 	
 
 All of this code is subject to minor alterations, complete rewrites, even removal.
