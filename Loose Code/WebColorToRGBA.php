@@ -1,27 +1,28 @@
 <?php
 function WebColorToRGBA($color){
-	$color = ltrim($color, '#'); // remove hash if there is one
+    $color = ltrim($color, '#'); // remove hash if there is one
+    
+    // Split Triplet 
+    $red = substr($color, 0, 2);
+    $green = substr($color, 2, 2);
+    $blue = substr($color, 4, 2);
+    
+    // Convert webcolor hex to RGB dec
+    $red = hexdec($red);
+    $green = hexdec($green);
+    $blue = hexdec($blue);
+    
+    // is this RGB = 6 or RGBA = 8?
+    if(strlen($color) == 8){
+        $alpha = substr($color, 6, 2); // get alpha 
+        $alpha = hexdec($alpha); // Convert to RGB
+        
+        // return RGBA
+        return array('red'=>$red, 'green'=>$green, 'blue'=>$blue, 'alpha'=>$alpha);
+    }
 	
-	// Split Triplet 
-	$red = substr($color, 0, 2);
-	$green = substr($color, 2, 2);
-	$blue = substr($color, 4, 2);
-	
-	// Convert webcolor hex to RGB dec
-	$red = hexdec($red);
-	$green = hexdec($green);
-	$blue = hexdec($blue);
-	
-	// is this RGB = 6 or RGBA = 8?
-	if(strlen($color) == 8){
-	    $alpha = substr($color, 6, 2); // get alpha 
-		$alpha = hexdec($alpha); // Convert to RGB
-		
-		// return RGBA
-	    return array('red'=>$red, 'green'=>$green, 'blue'=>$blue, 'alpha'=>$alpha);
-	}
-	// return RGB
-	return array('red'=>$red, 'green'=>$green, 'blue'=>$blue);
+    // return RGB
+    return array('red'=>$red, 'green'=>$green, 'blue'=>$blue);
 }
 // Examples
 // Note the # is optional
