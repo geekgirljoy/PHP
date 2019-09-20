@@ -5,10 +5,10 @@ class Complex
 	public $real;
 	public $imaginary;
 
-    function __construct($real, $imaginary){
+	function __construct($real, $imaginary){
 		$this->real = $real;
 		$this->imaginary = $imaginary;
-    }
+	}
 	
 	function Add($other, $dst){
 		$dst->real = $this->real + $other->real;
