@@ -52,12 +52,21 @@ ___
 ___
 
 ###### [FFT](Projects/FFT)
+An example of an [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform) writen in PHP
 
 [fft.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/FFT/fft.php) & 
 [complex.class.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/FFT/complex.class.php)
 
 ___
 
+###### [TTS](Projects/TTS)
+An example of using Text To Speech with PHP using eSpeak on Linux & Mac or SAPI on Windows.
+
+[TTS_MacAndLinux.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/TTS/TTS_MacAndLinux.php)
+
+[TTS_Windows.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/TTS/TTS_Windows.php)
+
+___
 
 ###### [AppTimer](Projects/AppTimer)
 
