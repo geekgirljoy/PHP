@@ -33,6 +33,11 @@ brew install espeak
 
 */
 
+// Say It
 $voice = "espeak";
 $statement = 'Hello World!';
 exec("$voice '$statement'");
+
+// Save it to a File
+exec("$voice '$statement' -w HelloWorld.wav");
+
