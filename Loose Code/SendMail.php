@@ -12,9 +12,9 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['messge'])) {
 	$header .= 'Cc: Executive1@JoyHarvel.com' . "\r\n";
 	$header .= 'Cc: Executive2@JoyHarvel.com' . "\r\n";
 	// BCC's
-	$header .= 'Bbc: CEO@JoyHarvel.com' . "\r\n";
-	$header .= 'Bbc: Executive1@JoyHarvel.com' . "\r\n";
-	$header .= 'Bbc: Executive2@JoyHarvel.com' . "\r\n";
+	$header .= 'Bcc: CEO@JoyHarvel.com' . "\r\n";
+	$header .= 'Bcc: Executive1@JoyHarvel.com' . "\r\n";
+	$header .= 'Bcc: Executive2@JoyHarvel.com' . "\r\n";
 
 	if(mail('Webmaster@JoyHarvel.com', 'Contact Form Submitted', $messge, $header)) {
 		echo 'Message Sent!' . PHP_EOL;
