@@ -50,7 +50,7 @@ $OS = strtoupper(substr(PHP_OS, 0, 3));
 // If this is Darwin (MacOS) AND we don't want eSpeak
 elseif($OS === 'DAR' && $mac_use_espeak == false) { 
     $voice = "say -v 'Victoria'";
-  	// Note: Mac say may require 4 char .wave extension
+    // Note: Mac say may require 4 char .wave extension
     //       if you recieve an error about format try
     //       changing this to HelloWorld.wave
     $save_file_args = '-o HelloWorld.wav'; // say args
