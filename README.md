@@ -60,7 +60,7 @@ An example of an [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform) wri
 ___
 
 ###### [TTS](Projects/TTS)
-An example of using Text To Speech with PHP using eSpeak on Linux & Mac or SAPI on Windows.
+An example of using Text To Speech with PHP using eSpeak on Linux & Mac (option to use say command) or SAPI on Windows.
 
 [TTS_MacAndLinux.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/TTS/TTS_MacAndLinux.php)
 
