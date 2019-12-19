@@ -134,22 +134,31 @@ echo $uncompressed_chars_from_groups . PHP_EOL;
 // back to the original string
 echo 'Uncompressed (from compressed string): ';
 $compressed_chars = str_split($compressed_chars);
+$compressed_chars_length = count($compressed_chars);
 $uncompressed_chars_from_string = '';
 foreach($compressed_chars as $key=>$char){
-	
-	// If the char to the left is not a number
-	if(!is_numeric(@$compressed_chars[$key-1])){
-		// If this char is a number
-		if(is_numeric($char)){
-			// Repeat the char to the right of this char
-			// this char's number of times
-			$uncompressed_chars_from_string .= str_repeat($compressed_chars[$key+1], $char);
-		}
-		else{ 
-		    // This char is a symbol or letter representing itself only
-		    $uncompressed_chars_from_string .= $char;
-		}
-	}
+    
+    // If the char to the left is not a number
+    if(!is_numeric(@$compressed_chars[$key-1])){
+        // If this char is a number
+        if(is_numeric($char)){
+			
+			// keep checking to the right in case number is > 9
+			$i = 0;
+			$number = '';
+			
+			while(is_numeric(@$compressed_chars[$key+$i]) && ($key+$i) <= $compressed_chars_length){
+				$number .= $compressed_chars[$key+$i]; // Concatenate the char onto a number string
+				$i++;
+			}
+			$uncompressed_chars_from_string .= str_repeat($compressed_chars[$key+$i], (int) $number);
+			
+        }
+        else{ 
+            // This char is a symbol or letter representing itself only
+            $uncompressed_chars_from_string .= $char;
+        }
+    }
 }
 echo $uncompressed_chars_from_string . PHP_EOL;
 
