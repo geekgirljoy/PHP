@@ -137,9 +137,9 @@ $compressed_chars = str_split($compressed_chars);
 $uncompressed_chars_from_string = '';
 foreach($compressed_chars as $key=>$char){
 	
-	// If the char to the left is not an integer
+	// If the char to the left is not a number
 	if(!is_numeric(@$compressed_chars[$key-1])){
-		// If this char is an integer
+		// If this char is a number
 		if(is_numeric($char)){
 			// Repeat the char to the right of this char
 			// this char's number of times
