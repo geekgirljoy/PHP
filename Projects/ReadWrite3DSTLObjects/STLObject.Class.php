@@ -28,7 +28,8 @@ class STLObject{
         
         // is string and > '.stl'
         if(is_string($stl_file) && (strlen($stl_file) > 4)){
-            $this->stl_file = file_get_contents($stl_file);
+            $this->stl_file = $stl_file;
+            $this->stl_data = file_get_contents($this->stl_file);
             $this->stl_data = explode(PHP_EOL, $this->stl_data);
 
             $facets = array();
