@@ -81,7 +81,7 @@ class RecursiveCounter{
     
     function __construct($start = 0, $stop = 0, &$results){
         
-        if(!is_numeric($this->start) && !is_numeric($this->stop)){
+        if(!is_numeric($this->start) || !is_numeric($this->stop)){
             die('Invalid count range' . PHP_EOL);
         }
 
