@@ -18,8 +18,24 @@ ___
 PHP Code Generator & Auto Commit Project.
 ___
 
-###### [fikitsphp](Projects/fikitsphp)
-Framework for the Fikits Application. This is a PHP version of a the Fikits application that was in development by myself and github.com/gabrielkunkel in Node.JS. At this time development is on hold on this and the main Fikits project.
+###### [ReadWrite3DSTLObjects](Projects/ReadWrite3DSTLObjects)
+An example of reading and write 3D objects using STL file format.
+
+[Test.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWrite3DSTLObjects/Test.php)
+
+Class Files:
+
+[Vertex.Class.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWrite3DSTLObjects/Vertex.Class.php)
+
+[Facet.Class.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWrite3DSTLObjects/Facet.Class.php)
+
+[STLObject.Class.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWrite3DSTLObjects/STLObject.Class.php)
+
+Test STL Files:
+
+[cube.stl](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWrite3DSTLObjects/cube.stl)
+
+[RandomlyGenerated.stl](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWrite3DSTLObjects/RandomlyGenerated.stl)
 
 ___
 
