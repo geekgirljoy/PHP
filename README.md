@@ -19,7 +19,7 @@ PHP Code Generator & Auto Commit Project.
 ___
 
 ###### [ReadWrite3DSTLObjects](Projects/ReadWrite3DSTLObjects)
-An example of reading and write 3D objects using STL file format.
+An example of reading and writing 3D objects using STL file format.
 
 [Test.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWrite3DSTLObjects/Test.php)
 
