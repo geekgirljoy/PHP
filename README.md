@@ -111,6 +111,7 @@ This folder contains stand alone code. Each does something different and is here
 ###### [AreaOfACylinder.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/AreaOfACylinder.php)
 ###### [AreaOfATriangle.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/AreaOfATriangle.php)
 ###### [AssociativeArray.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/AssociativeArray.php)
+###### [AutoCorrect.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/AutoCorrect.php)
 ###### [BinaryAgents.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/BinaryAgents.php)
 ###### [BogoSort.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/BogoSort.php)
 ###### [BubbleSort.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/BubbleSort.php)
