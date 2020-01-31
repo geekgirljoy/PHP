@@ -16,7 +16,30 @@
       font-size: 22px;
       background-color: lightgrey;
     }
-  
+    
+    /* Submit button container*/
+    #submitter{
+      text-align: right; 
+      width: 100%;
+    }
+    
+     /* Submit button */
+    input[type=submit]{
+    margin-right: 10px;
+      height: 40px;
+      width: 40px;
+      background-color: #606060;
+      border-width: 0px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 22px;
+      color: white;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    
     /* An emotion container */
     .emotion {
       display: block;
@@ -55,7 +78,6 @@
       background-color: #ccc;
     }
 
-
     /* When the anger checkbox is checked, add a color */
     .emotion #anger:checked ~ .checkmark {
       background-color: #FF0000;
@@ -71,12 +93,10 @@
       background-color: #0000FF;
     }
 
-
     /* When the disgust checkbox is checked, add a color */
     .emotion #disgust:checked ~ .checkmark {
       background-color: #FF00FF;
     }
-
 
     /* When the anticipation checkbox is checked, add a color */
     .emotion #anticipation:checked ~ .checkmark {
@@ -139,6 +159,7 @@
         </tr> 
         <tr>
           <td id='emotions'>
+            <form>
             <label class="emotion">Anger
               <input id="anger" name="anger" type="checkbox">
               <span class="checkmark"></span>
@@ -173,6 +194,11 @@
             $string = "Emotion riddled sentence that will generate an amazing feelings dataset.";
             echo $string; 
             ?>
+            
+            <div id="submitter">
+                <input type="submit" value="&#8250;">
+            </div>
+            </form>
           </td>
         </tr>
       </table>
