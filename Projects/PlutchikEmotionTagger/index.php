@@ -111,7 +111,6 @@
       top: 7px;
       width: 5px;
       height: 5px;
-      //background-color: #FFFFFF;
       border: solid white;
       border-width: 3px 3px 3px 3px;
       border-radius: 10px;
@@ -123,7 +122,6 @@
       top: 7px;
       width: 5px;
       height: 5px;
-      //background-color: #FFFFFF;
       border: solid black;
       border-width: 3px 3px 3px 3px;
       border-radius: 10px;
