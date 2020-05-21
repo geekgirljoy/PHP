@@ -5,6 +5,28 @@ function ConvertColorToInputFloatRange($color_int_value, $max = 255){
     return ((($color_int_value - -1) * (1 - -1)) / ($max - 0)) + -1;
 }
 
+// RGB Color to range of -1 to 1
+$R = 102;
+$G = 102;
+$B = 102;
+echo  "Pixel_RGB($R,$G,$B) = " . ConvertColorToInputFloatRange($R+$G+$B, 255+255+255) . PHP_EOL;
+
+
+// RGB to Gray-scale to range of -1 to 1
+$gray = ($R+$G+$B) / 3;
+echo  "Pixel_Grayscale($gray) = " . ConvertColorToInputFloatRange($gray, 255) . PHP_EOL;
+
+/*
+
+Pixel_RGB(102,102,102) = -0.19738562091503
+Pixel_Greyscale(102) = -0.1921568627451
+
+*/
+
+
+
+
+
 // Gray-scale / One Color channel 0-255
 for ($i = 0; $i <= 255; $i += 1){
     echo  $i . ' = ' . ConvertColorToInputFloatRange($i) . PHP_EOL;
