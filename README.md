@@ -147,6 +147,7 @@ This folder contains stand alone code. Each does something different and is here
 ###### [RandomFloat.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/RandomFloat.php)
 ###### [RepeatAString.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/RepeatAString.php)
 ###### [ReverseAString.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/ReverseAString.php)
+###### [RGB_HSL.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/RGB_HSL.php)
 ###### [SearchAndReplace.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/SearchAndReplace.php)
 ###### [SendMail.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/SendMail.php)
 ###### [ShapeClass.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/ShapeClass.php)
