@@ -39,6 +39,25 @@ Test STL Files:
 
 ___
 
+###### [ReadWriteWaveAudioFiles](Projects/ReadWriteWaveAudioFiles)
+An example of reading and writing RIFF Wave Audio file format.
+
+[ReadWriteWavs.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWriteWaveAudioFiles/ReadWriteWavs.php)
+
+Class File:
+
+[JoysWaveReader.class.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWriteWaveAudioFiles/JoysWaveReader.class.php)
+
+Test Audio Files:
+
+[220HzSaw.wav](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWriteWaveAudioFiles/WAVs/220HzSaw.wav)
+
+[220HzSine.wav](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWriteWaveAudioFiles/WAVs/220HzSine.wav)
+
+[220HzSquare.wav](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWriteWaveAudioFiles/WAVs/220HzSquare.wav)
+
+___
+
 ###### [Spider](Projects/Spider)
 A Simple Web Spider built with PHP.
 
