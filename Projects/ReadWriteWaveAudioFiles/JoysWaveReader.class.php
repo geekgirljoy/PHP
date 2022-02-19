@@ -68,27 +68,27 @@ class JoysWaveReader {
     }
 
     function WriteWaveFile($name){
-		$file_handle = fopen($name, 'w'); // Open wav file for writing
+	$file_handle = fopen($name, 'w'); // Open wav file for writing
         fwrite($file_handle, $this->audio_file_data['Header']['Type'], 4);// Write Bytes 0-4
-		fwrite($file_handle, $this->audio_file_data['Header']['Size'], 4);// Write Bytes 4-8
+	fwrite($file_handle, $this->audio_file_data['Header']['Size'], 4);// Write Bytes 4-8
         fwrite($file_handle, $this->audio_file_data['Header']['Format'], 4);// Write Bytes 8-12
-		fwrite($file_handle, strtolower($this->audio_file_data['FMTChunk']['ID']), 4);// Write Bytes 12-16
-		fwrite($file_handle, $this->audio_file_data['FMTChunk']['FMTChunkSize'], 4);// Write Bytes 16-20
-		fwrite($file_handle, $this->audio_file_data['FMTChunk']['AudioFormat'], 2);// Write Bytes 20-22
-		fwrite($file_handle, $this->audio_file_data['FMTChunk']['NumberOfChannels'], 2);// Write Bytes 22-24
-		fwrite($file_handle, $this->audio_file_data['FMTChunk']['SampleRate'], 4);// Write Bytes 24-28
-		fwrite($file_handle, $this->audio_file_data['FMTChunk']['ByteRate'], 4);// Write Bytes 28-32
-		fwrite($file_handle, $this->audio_file_data['FMTChunk']['BlockAlign'], 2);// Write Bytes 32-34
-		fwrite($file_handle, $this->audio_file_data['FMTChunk']['BitsPerSample'], 2);// Write Bytes 34-36
-		fwrite($file_handle, strtolower($this->audio_file_data['DataChunk']['ID']), 4);// Write Bytes 36-40
-		fwrite($file_handle, $this->audio_file_data['DataChunk']['DataChunkSize'], 4);// Write Bytes 40-44
-		fwrite($file_handle, $this->audio_file_data['DataChunk']['Data']);// Write Bytes 44-EOF
+	fwrite($file_handle, strtolower($this->audio_file_data['FMTChunk']['ID']), 4);// Write Bytes 12-16
+	fwrite($file_handle, $this->audio_file_data['FMTChunk']['FMTChunkSize'], 4);// Write Bytes 16-20
+	fwrite($file_handle, $this->audio_file_data['FMTChunk']['AudioFormat'], 2);// Write Bytes 20-22
+	fwrite($file_handle, $this->audio_file_data['FMTChunk']['NumberOfChannels'], 2);// Write Bytes 22-24
+	fwrite($file_handle, $this->audio_file_data['FMTChunk']['SampleRate'], 4);// Write Bytes 24-28
+	fwrite($file_handle, $this->audio_file_data['FMTChunk']['ByteRate'], 4);// Write Bytes 28-32
+	fwrite($file_handle, $this->audio_file_data['FMTChunk']['BlockAlign'], 2);// Write Bytes 32-34
+	fwrite($file_handle, $this->audio_file_data['FMTChunk']['BitsPerSample'], 2);// Write Bytes 34-36
+	fwrite($file_handle, strtolower($this->audio_file_data['DataChunk']['ID']), 4);// Write Bytes 36-40
+	fwrite($file_handle, $this->audio_file_data['DataChunk']['DataChunkSize'], 4);// Write Bytes 40-44
+	fwrite($file_handle, $this->audio_file_data['DataChunk']['Data']);// Write Bytes 44-EOF
         fclose($file_handle); // Close Wav File
     }
 
 
     function Decode(){
-		$this->audio_file_data['Header']['Size'] = unpack('V', $this->audio_file_data['Header']['Size'])[1]; // File size in kb
+	$this->audio_file_data['Header']['Size'] = unpack('V', $this->audio_file_data['Header']['Size'])[1]; // File size in kb
         $this->audio_file_data['FMTChunk']['FMTChunkSize'] = unpack('V', $this->audio_file_data['FMTChunk']['FMTChunkSize'])[1]; // 4 Bytes
         $this->audio_file_data['FMTChunk']['AudioFormat'] = unpack('v', $this->audio_file_data['FMTChunk']['AudioFormat'])[1]; // 2 Bytes
         $this->audio_file_data['FMTChunk']['NumberOfChannels'] = unpack('v', $this->audio_file_data['FMTChunk']['NumberOfChannels'])[1]; // 2
@@ -112,7 +112,7 @@ class JoysWaveReader {
         $this->audio_file_data['DataChunk']['DataChunkSize'] = pack('V', $this->audio_file_data['DataChunk']['DataChunkSize']); // 4 Bytes
         $data = $this->audio_file_data['DataChunk']['Data'];
         $this->audio_file_data['DataChunk']['Data'] = '';
-		foreach($data as $datachunk){
+	foreach($data as $datachunk){
             $this->audio_file_data['DataChunk']['Data'] .= pack('v*', $datachunk); // 4 Bytes
         }
     }
