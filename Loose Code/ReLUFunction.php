@@ -1,5 +1,5 @@
 <?php
-https://en.wikipedia.org/wiki/Rectifier_(neural_networks)
+// https://en.wikipedia.org/wiki/Rectifier_(neural_networks)
 function ReLU($t){
     return max(0, $t);
 }
