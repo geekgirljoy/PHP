@@ -5,17 +5,20 @@ function ReLU($t){
 }
 
 function LeakyReLU($t, $leak = 0.1){
-	return max($leak * $t, $t);
+    return max($leak * $t, $t);
 }
 
 function Softplus($t){
-	return log(1 + exp($t));
+    return log(1 + exp($t));
 }
 
+function ELU($t){
+    return $t > 0 ? $t : exp($t) - 1;
+}
 
 $test_results = array();
 for ($i = -5.00; $i < 5.00; $i+= 1){
-	array_push($test_results, ReLU($i));
+    array_push($test_results, ReLU($i));
 }
 var_dump($test_results);
 
@@ -40,7 +43,7 @@ Results of ReLU Function:
 
 $test_results = array();
 for ($i = -5.00; $i < 5.00; $i+= 1){
-	array_push($test_results, LeakyReLU($i));
+    array_push($test_results, LeakyReLU($i));
 }
 var_dump($test_results);
 
@@ -65,7 +68,7 @@ Results of LeakyReLU Function:
 
 $test_results = array();
 for ($i = -5.00; $i < 5.00; $i+= 1){
-	array_push($test_results, Softplus($i));
+    array_push($test_results, Softplus($i));
 }
 var_dump($test_results);
 
@@ -83,5 +86,29 @@ Results of Softplus Function:
 2.126928011043
 3.0485873515737
 4.0181499279178
+
+*/
+
+
+$test_results = array();
+for ($i = -5.00; $i < 5.00; $i+= 1){
+    array_push($test_results, ELU($i));
+}
+var_dump($test_results);
+
+/*
+
+Results of ELU Function:
+
+-0.99326205300091
+-0.98168436111127
+-0.95021293163214
+-0.86466471676339
+-0.63212055882856
+0
+1
+2
+3
+4
 
 */
