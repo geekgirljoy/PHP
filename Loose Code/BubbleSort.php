@@ -24,7 +24,7 @@ function BubbleSort($array){
 		
     }
 	
-	// $array not set issue message and end program
+    // $array not set issue message and end program
     die("No Array! Use: BubbleSort(ARRAY)");
 }
 $sorted = BubbleSort(array(9,8,7,6,5,1,4,3,2,0));
