@@ -150,6 +150,7 @@ This folder contains stand alone code. Each does something different and is here
 ###### [DistinctMinimumMaximumAverageSQL.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/DistinctMinimumMaximumAverageSQL.php)
 ###### [DNAPairing.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/DNAPairing.php)
 ###### [DogClass.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/DogClass.php)
+###### [DotProduct.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/DotProduct.php)
 ###### [DrakeEquation.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/DrakeEquation.php)
 ###### [DynamicFunctionalTemplating.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/DynamicFunctionalTemplating.php)
 ###### [FindKeyValuePairsInString.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/FindKeyValuePairsInString.php)
