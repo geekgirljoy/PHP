@@ -157,6 +157,7 @@ This folder contains stand alone code. Each does something different and is here
 ###### [FindTheLongestWordInAString.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/FindTheLongestWordInAString.php)
 ###### [FunctionalTemplatingHTML5.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/FunctionalTemplatingHTML5.php)
 ###### [GeneratePrimeNumbers.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/GeneratePrimeNumbers.php)
+###### [ImageCropper.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/ImageCropper.php)
 ###### [Invert.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/Invert.php)
 ###### [IsSocratesMortal.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/IsSocratesMortal.php)
 ###### [LookForwardCharGroupStringCompression.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/LookForwardCharGroupStringCompression.php)
