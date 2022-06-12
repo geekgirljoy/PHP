@@ -30,7 +30,7 @@ while($Application->RunState != 0){
     }
     
     // Perform Regular Menu Actions
-    if(!empty($Application->CurrentMenu->MenuActions[$Application->command])){ // if the menu option has a corasponding menu action
+    if(!empty($Application->CurrentMenu->MenuActions[$Application->command])){ // if the menu option has a corresponding menu action
         
         // if the action is a string function name
         if(is_string($Application->CurrentMenu->MenuActions[$Application->command])){
