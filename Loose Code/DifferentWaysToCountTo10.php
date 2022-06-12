@@ -68,7 +68,7 @@ echo $output . PHP_EOL . PHP_EOL; // 0 1 2 3 4 5 6 7 8 9 10
 
 
 // unset and garbage collect output
-$outout = NULL;
+$output = NULL;
 unset($output);
 
 
