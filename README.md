@@ -126,6 +126,15 @@ ___
 ###### [PlutchikEmotionTagger](Projects/PlutchikEmotionTagger)
 An incomplete Plutchik Emotion Tagger
 ___
+###### [PHPCommandLineMenuApp](Projects/PHPCommandLineMenuApp)
+An example command line menu app using PHP
+
+[app.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/PHPCommandLineMenuApp/app.php)
+
+[menus.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/PHPCommandLineMenuApp/menus.php)
+
+[functions.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/PHPCommandLineMenuApp/functions.php)
+___
 
 
 ## Loose Code
