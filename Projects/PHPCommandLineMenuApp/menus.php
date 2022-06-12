@@ -3,8 +3,10 @@
 // Application Special Keywords
 $SpecialKeywords = new stdClass();
 $SpecialKeywords->Name = "Special Keywords";
-$SpecialKeywords->Actions = array('QUIT'=>'Quit'); // SpecialKeywords KEYS ARE ALL CAPS
-                                                   // Values are their function name
+$SpecialKeywords->Actions = array('QUIT'=>'Quit',
+                                  'TEXTEDIT'=>['OpenTextEditor']); // SpecialKeywords KEYS ARE ALL CAPS
+                                                                   // Values are their function name
+                                                                   // or array  [function name, data]
 // Application Main Menu
 $MainMenu = new stdClass();
 $MainMenu->Name = "Main Menu";
