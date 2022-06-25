@@ -16,7 +16,7 @@ var_dump($step_squad_members);
 
 /*
 Step Squad Members:
-array(99) {
+array(100) {
   [0]=>
   int(1)
   [1]=>
