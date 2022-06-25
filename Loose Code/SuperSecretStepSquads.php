@@ -6,7 +6,7 @@ $number_of_members_to_find = 100;
 $previous = 0;
 $step_squad_members = array();
 
-for($i = 1; $i < $number_of_members_to_find; $i++){
+for($i = 1; $i < $number_of_members_to_find + 1; $i++){
     $previous = $previous + $i;
     $step_squad_members[] = $previous;    
 }
@@ -215,5 +215,7 @@ array(99) {
   int(4851)
   [98]=>
   int(4950)
+  [99]=>
+  int(5050)
 }
 */
