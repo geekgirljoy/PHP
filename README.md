@@ -172,6 +172,7 @@ This folder contains stand alone code. Each does something different and is here
 ###### [LookForwardCharGroupStringCompression.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/LookForwardCharGroupStringCompression.php)
 ###### [LucasFormula.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/LucasFormula.php)
 ###### [Mutations.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/Mutations.php)
+###### [PeaksAndTroughs.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/PeaksAndTroughs.php)
 ###### [PersonClass.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/PersonClass.php)
 ###### [PlaceholderImageGenerator.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/PlaceholderImageGenerator.php)
 ###### [RandomEvenOddBitwise.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/RandomEvenOddBitwise.php)
