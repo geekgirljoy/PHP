@@ -11,6 +11,8 @@ $peaks_and_troughs = array('begin'); // Tag the starting index at with/as the be
 // Start at the beginning of $dataset, consider the data point at start+1 and increment until we consider the last data point
 for($i = array_key_first($dataset) + 1; $i <= array_key_last($dataset); $i++){
    
+   $peaks_and_troughs[$i] = ''; // Transitional value/state - no label
+   
    // Determine if $dataset[$i] is a peak
    if($dataset[$i] >= $dataset[$i-1]){
       $peaks_and_troughs[$i] = 'peak';
@@ -35,9 +37,6 @@ for($i = array_key_first($dataset) + 1; $i <= array_key_last($dataset); $i++){
       }
    }
    
-   else{
-      $peaks_and_troughs[$i] = ''; // Transitional value/state - no label
-   }
 }
 
 var_dump($peaks_and_troughs);
