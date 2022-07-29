@@ -186,6 +186,7 @@ This folder contains stand alone code. Each does something different and is here
 ###### [ShapeClass.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/ShapeClass.php)
 ###### [SigmoidFunction.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/SigmoidFunction.php)
 ###### [SpinalTapCase.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/SpinalTapCase.php)
+###### [SpinalTapCase.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/Squirrel3.php)
 ###### [SumArray.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/SumArray.php)
 ###### [SuperSecretStepSquads.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/SuperSecretStepSquads.php)
 ###### [ThisFolderStaysThisFolderGoes.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/ThisFolderStaysThisFolderGoes.php)
