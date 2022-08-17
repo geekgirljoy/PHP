@@ -38,6 +38,11 @@ function SiLU($x) {
     return $sigmoid * $x;
 }
 
+// Gaussian Error Linear Unit
+function GELU($x) {
+    return 0.5 * $x * (1 + tanh(sqrt(2 / pi()) * ($x + 0.044715 * pow($x, 3))));
+}
+
 
 $test_results = array();
 for ($i = -5.00; $i < 5.00; $i+= 1){
@@ -179,5 +184,30 @@ Results of SiLU "Swish" Function:
 1.7615941559558
 2.8577223804673
 3.9280551601516
+
+*/
+
+
+$test_results = array();
+for ($i = -5.00; $i <= 5.00; $i+= 1){
+    array_push($test_results, GELU($i));
+}
+var_dump($test_results);
+
+/*
+
+Results of GELU Function:
+
+-2.2917961972624E-7
+-7.0245948192271E-5
+-0.003637392081773
+-0.045402305912225
+-0.15880800939172
+0
+0.84119199060828
+1.9545976940878
+2.9963626079182
+3.9999297540518
+4.9999997708204
 
 */
