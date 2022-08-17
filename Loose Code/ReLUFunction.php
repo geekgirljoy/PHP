@@ -19,6 +19,13 @@ function ELU($t){
     return $t > 0 ? $t : exp($t) - 1;
 }
 
+// Scaled Exponential Linear Unit
+function SELU($x) {
+    $alpha = 1.6732632423543772848170429916717; // alpha value for SELU 
+    $scale = 1.0507009873554804934193349852946; // scale value for SELU
+    return $scale * ($x >= 0 ? $x : $alpha * exp($x) - $alpha); // SELU function
+}
+
 // Sigmoid Linear Unit (sometimes called the "Swish function")
 // Reference: https://arxiv.org/abs/1710.05941v1
 // "Our experiments show that Swish tends to work better than ReLU on deeper models 
@@ -31,12 +38,12 @@ function SiLU($x) {
     return $sigmoid * $x;
 }
 
+
 $test_results = array();
 for ($i = -5.00; $i < 5.00; $i+= 1){
     array_push($test_results, ReLU($i));
 }
 var_dump($test_results);
-
 
 /*
 
@@ -61,7 +68,6 @@ for ($i = -5.00; $i < 5.00; $i+= 1){
     array_push($test_results, LeakyReLU($i));
 }
 var_dump($test_results);
-
 
 /*
 
@@ -125,6 +131,30 @@ Results of ELU Function:
 2
 3
 4
+
+*/
+
+
+$test_results = array();
+for ($i = -5.00; $i < 5.00; $i+= 1){
+    array_push($test_results, SELU($i));
+}
+var_dump($test_results);
+
+/*
+
+Results of SELU Function:
+
+-1.7462533606696
+-1.7258986281899
+-1.6705687287671
+-1.5201664685957
+-1.1113307378126
+0
+1.0507009873555
+2.101401974711
+3.1521029620664
+4.2028039494219
 
 */
 
