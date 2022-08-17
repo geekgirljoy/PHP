@@ -4,16 +4,31 @@ function ReLU($t){
     return max(0, $t);
 }
 
+// Leaky Rectified Linear Unit
 function LeakyReLU($t, $leak = 0.1){
     return max($leak * $t, $t);
 }
 
+// SoftPlus is a smooth approximation to the ReLU
 function Softplus($t){
     return log(1 + exp($t));
 }
 
+// Exponential Linear Unit
 function ELU($t){
     return $t > 0 ? $t : exp($t) - 1;
+}
+
+// Sigmoid Linear Unit (sometimes called the "Swish function")
+// Reference: https://arxiv.org/abs/1710.05941v1
+// "Our experiments show that Swish tends to work better than ReLU on deeper models 
+// across a number of challenging datasets. For example, simply replacing ReLUs with 
+// Swish units improves top-1 classification accuracy on ImageNet by 0.9% for Mobile NASNet-A
+// and 0.6% for Inception-ResNet-v2. The simplicity of Swish and its similarity to ReLU make 
+// it easy for practitioners to replace ReLUs with Swish units in any neural network."
+function SiLU($x) {
+    $sigmoid = 1 / (1 + exp(-$x)); // sigmoid function
+    return $sigmoid * $x;
 }
 
 $test_results = array();
@@ -110,5 +125,29 @@ Results of ELU Function:
 2
 3
 4
+
+*/
+
+
+$test_results = array();
+for ($i = -5.00; $i < 5.00; $i+= 1){
+    array_push($test_results, SiLU($i));
+}
+var_dump($test_results);
+
+/*
+
+Results of SiLU "Swish" Function:
+
+-0.033464254621424
+-0.071944839848366
+-0.1422776195327
+-0.23840584404424
+-0.26894142137
+0
+0.73105857863
+1.7615941559558
+2.8577223804673
+3.9280551601516
 
 */
