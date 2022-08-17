@@ -185,6 +185,7 @@ This folder contains stand alone code. Each does something different and is here
 ###### [SendMail.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/SendMail.php)
 ###### [ShapeClass.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/ShapeClass.php)
 ###### [SigmoidFunction.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/SigmoidFunction.php)
+###### [SoftMax.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/SoftMax.php)
 ###### [SpinalTapCase.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/SpinalTapCase.php)
 ###### [Squirrel3.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/Squirrel3.php)
 ###### [SumArray.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/SumArray.php)
