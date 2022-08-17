@@ -135,6 +135,20 @@ An example command line menu app using PHP
 
 [functions.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/PHPCommandLineMenuApp/functions.php)
 ___
+###### [Tokens_And_Word_Embeddings](Projects/Tokens_And_Word_Embeddings)
+A word to token and string to embedding generator.
+
+[GenerateWordTokensVocabulary.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/Tokens_And_Word_Embeddings/GenerateWordTokensVocabulary.php)
+
+[Class.Tokenizer.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/Tokens_And_Word_Embeddings/Class.Tokenizer.php)
+
+[Example.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/Tokens_And_Word_Embeddings/Example.php)
+
+**Note:** (sourced from /usr/dict/words) [words](https://github.com/geekgirljoy/PHP/blob/master/Projects/Tokens_And_Word_Embeddings/words)
+
+[vocab.json](https://github.com/geekgirljoy/PHP/blob/master/Projects/Tokens_And_Word_Embeddings/vocab.json)
+___
+
 
 
 ## Loose Code
