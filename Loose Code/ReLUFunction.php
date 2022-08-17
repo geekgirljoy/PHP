@@ -43,6 +43,10 @@ function GELU($x) {
     return 0.5 * $x * (1 + tanh(sqrt(2 / pi()) * ($x + 0.044715 * pow($x, 3))));
 }
 
+// Parametric Gaussian
+function Gaussian($x, $mu, $sigma) {
+    return exp(-$x * $x / (2 * $sigma * $sigma)) / (sqrt(2 * pi()) * $sigma);
+}
 
 $test_results = array();
 for ($i = -5.00; $i < 5.00; $i+= 1){
@@ -209,5 +213,31 @@ Results of GELU Function:
 2.9963626079182
 3.9999297540518
 4.9999997708204
+
+*/
+
+
+
+$test_results = array();
+for ($i = -5.00; $i <= 5.00; $i+= 1){
+    array_push($test_results, Gaussian($i, $mu=0, $sigma=1));
+}
+var_dump($test_results);
+
+/*
+
+Results of Gaussian Function:
+
+1.4867195147343E-6
+0.00013383022576489
+0.004431848411938
+0.053990966513188
+0.24197072451914
+0.39894228040143
+0.24197072451914
+0.053990966513188
+0.004431848411938
+0.00013383022576489
+1.4867195147343E-6
 
 */
