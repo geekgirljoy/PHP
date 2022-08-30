@@ -189,6 +189,7 @@ This folder contains stand alone code. Each does something different and is here
 ###### [PeaksAndTroughs.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/PeaksAndTroughs.php)
 ###### [PersonClass.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/PersonClass.php)
 ###### [PlaceholderImageGenerator.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/PlaceholderImageGenerator.php)
+###### [Pythagorean.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/Pythagorean.php)
 ###### [RandomEvenOddBitwise.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/RandomEvenOddBitwise.php)
 ###### [RandomFloat.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/RandomFloat.php)
 ###### [ReLUFunction.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/ReLUFunction.php)
