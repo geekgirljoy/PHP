@@ -94,6 +94,20 @@ An example of an [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform) wri
 
 ___
 
+
+###### [Image Mask Extraction](Projects/ImageMask)
+Extract part of an image from another image using a masking image... just... just because... HADOUKEN!
+
+[ImageMaskExtract.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/ImageMask/ImageMaskExtract.php)
+
+[Gradient to Extract From](https://github.com/geekgirljoy/PHP/blob/master/Projects/ImageMask/images/Fireball.png)
+
+[Mask to Extract](https://github.com/geekgirljoy/PHP/tree/master/Projects/ImageMask/mask_images/Fireball.png)
+
+[Output](https://github.com/geekgirljoy/PHP/blob/master/Projects/ImageMask/output/Fireball.png)
+
+___
+
 ###### [TTS](Projects/TTS)
 An example of using Text To Speech with PHP using eSpeak on Linux & Mac (option to use say command) or SAPI on Windows.
 
