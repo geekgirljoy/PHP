@@ -58,7 +58,7 @@ Test Audio Files:
 
 ___
 
-###### [ReadWriteWaveAudioFiles](Projects/ReadWriteWaveAudioFiles)
+###### [Displacement Map](Projects/DisplacementMap)
 Create a displacment map from an image.
 
 [CreateDisplacementMap.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/DisplacementMap/CreateDisplacementMap.php)
