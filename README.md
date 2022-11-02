@@ -58,6 +58,25 @@ Test Audio Files:
 
 ___
 
+###### [ReadWriteWaveAudioFiles](Projects/ReadWriteWaveAudioFiles)
+Create a displacment map from an image.
+
+[CreateDisplacementMap.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/DisplacementMap/CreateDisplacementMap.php)
+
+Examples/Results:
+
+[Input Image](https://github.com/geekgirljoy/PHP/blob/master/Projects/DisplacementMap/building.png)
+
+[Displacement Map Output](https://github.com/geekgirljoy/PHP/blob/master/Projects/DisplacementMap/displacement_map.png)
+
+[STL Example](https://github.com/geekgirljoy/PHP/blob/master/Projects/DisplacementMap/BuildingDisplacementMap.stl)
+
+[FBX Example](https://github.com/geekgirljoy/PHP/blob/master/Projects/DisplacementMap/BuildingDisplacementMap.fbx)
+
+[Blender File](https://github.com/geekgirljoy/PHP/blob/master/Projects/DisplacementMap/BuildingDisplacementMap.blend)
+
+___
+
 ###### [Spider](Projects/Spider)
 A Simple Web Spider built with PHP.
 
