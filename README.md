@@ -59,7 +59,7 @@ Test Audio Files:
 ___
 
 ###### [Displacement Map](Projects/DisplacementMap)
-Create a displacment map from an image.
+Create a displacement map from an image.
 
 [CreateDisplacementMap.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/DisplacementMap/CreateDisplacementMap.php)
 
@@ -240,6 +240,7 @@ This folder contains stand alone code. Each does something different and is here
 ###### [SuperSecretStepSquads.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/SuperSecretStepSquads.php)
 ###### [ThisFolderStaysThisFolderGoes.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/ThisFolderStaysThisFolderGoes.php)
 ###### [TitleCaseASentence.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/TitleCaseASentence.php)
+###### [Torque&AngularVelocity.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/Torque%26AngularVelocity.php)
 ###### [TrainFANNNeuralNetworkFromMySQL.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/TrainFANNNeuralNetworkFromMySQL.php)
 ###### [TruncateAString.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/TruncateAString.php)
 ###### [WebColorToRGBA.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/WebColorToRGBA.php)
