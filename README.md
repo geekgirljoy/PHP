@@ -22,10 +22,14 @@ ___
 An example of reading and writing 3D objects using STL file format.
 
 Random STL Example:
+
 [Test.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWrite3DSTLObjects/Test.php)
 
 Image to Mesh Example:
-[Test.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWrite3DSTLObjects/ImageToMesh_CalderaCrater.php)
+
+[ImageToMesh_CalderaCrater.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWrite3DSTLObjects/ImageToMesh_CalderaCrater.php)
+
+[CalderaCrater.png](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWrite3DSTLObjects/CalderaCrater.png)
 
 Class Files:
 
