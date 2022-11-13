@@ -21,7 +21,11 @@ ___
 ###### [ReadWrite3DSTLObjects](Projects/ReadWrite3DSTLObjects)
 An example of reading and writing 3D objects using STL file format.
 
+Random STL Example:
 [Test.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWrite3DSTLObjects/Test.php)
+
+Image to Mesh Example:
+[Test.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWrite3DSTLObjects/ImageToMesh_CalderaCrater.php)
 
 Class Files:
 
@@ -36,6 +40,8 @@ Test STL Files:
 [cube.stl](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWrite3DSTLObjects/cube.stl)
 
 [RandomlyGenerated.stl](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWrite3DSTLObjects/RandomlyGenerated.stl)
+
+[CalderaCrater.stl](https://github.com/geekgirljoy/PHP/blob/master/Projects/ReadWrite3DSTLObjects/CalderaCrater.stl)
 
 ___
 
