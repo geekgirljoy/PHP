@@ -164,11 +164,13 @@ ___
 
 ###### [SplitRGB](Projects/SplitRGBChannels)
 How to use the PHP & the GD lib to split RGB "TrueColor" images into seperated RGB monochrome images.
+
 ___
 
 ###### [PlutchikEmotionTagger](Projects/PlutchikEmotionTagger)
 An incomplete Plutchik Emotion Tagger
 ___
+
 ###### [PHPCommandLineMenuApp](Projects/PHPCommandLineMenuApp)
 An example command line menu app using PHP
 
@@ -177,7 +179,9 @@ An example command line menu app using PHP
 [menus.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/PHPCommandLineMenuApp/menus.php)
 
 [functions.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/PHPCommandLineMenuApp/functions.php)
+
 ___
+
 ###### [Tokens_And_Word_Embeddings](Projects/Tokens_And_Word_Embeddings)
 A word to token and string to embedding generator.
 
@@ -190,8 +194,17 @@ A word to token and string to embedding generator.
 **Note:** (sourced from /usr/dict/words) [words](https://github.com/geekgirljoy/PHP/blob/master/Projects/Tokens_And_Word_Embeddings/words)
 
 [vocab.json](https://github.com/geekgirljoy/PHP/blob/master/Projects/Tokens_And_Word_Embeddings/vocab.json)
+
 ___
 
+###### [XOR Neural Network](Projects/XOR%20Network)
+XOR from scratch... in PHP no less! ¯\㋡/¯
+
+[xor.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/XOR%20Network/xor.php)
+
+[xor.net](https://github.com/geekgirljoy/PHP/blob/master/Projects/XOR%20Network/xor.net)
+
+___
 
 
 ## Loose Code
