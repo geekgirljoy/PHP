@@ -5,7 +5,7 @@
 
 $number_of_images = 100; // How many images we want to take, change this to suit your needs
 $current_image_number = 1; // The current image number
-$dataset_name = 'Test2'; // The name of the dataset in the Datasets folder
+$dataset_name = 'Test'; // The name of the dataset in the Datasets folder
 $save_path = 'Datasets'; // The path to the Datasets folder
 
 // If the Datasets folder does not exist, create it
@@ -73,7 +73,7 @@ while($current_image_number <= $number_of_images){
     SAY($OS, $voice, $statement);
 
     // Get the image from the webcam
-    $cmd = "ffmpeg.exe -nostats -loglevel 0 -f vfwcap -i 0 -vframes 1 -y $save_path/$dataset_name/image$current_image_number.jpg";
+    $cmd = "$ffmpeg_path -nostats -loglevel 0 -f vfwcap -i 0 -vframes 1 -y $save_path/$dataset_name/image$current_image_number.jpg";
     exec($cmd);
 
     // Announce that the image has been taken
