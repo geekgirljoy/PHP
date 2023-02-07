@@ -268,6 +268,7 @@ This folder contains stand alone code. Each does something different and is here
 ###### [Torque&AngularVelocity.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/Torque%26AngularVelocity.php)
 ###### [TrainFANNNeuralNetworkFromMySQL.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/TrainFANNNeuralNetworkFromMySQL.php)
 ###### [TruncateAString.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/TruncateAString.php)
+###### [Vector3.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/Vector3.php)
 ###### [WebColorToRGBA.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/WebColorToRGBA.php)
  	
 
