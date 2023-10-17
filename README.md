@@ -250,6 +250,7 @@ This folder contains stand alone code. Each does something different and is here
 ###### [RandomEvenOddBitwise.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/RandomEvenOddBitwise.php)
 ###### [RandomFloat.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/RandomFloat.php)
 ###### [ReLUFunction.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/ReLUFunction.php)
+###### [RealisticTypingTyposForAITypists.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/RealisticTypingTyposForAITypists.php)
 ###### [RepeatAString.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/RepeatAString.php)
 ###### [ReverseAString.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/ReverseAString.php)
 ###### [RGB_HSL.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/RGB_HSL.php)
