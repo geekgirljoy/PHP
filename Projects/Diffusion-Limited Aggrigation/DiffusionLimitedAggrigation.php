@@ -59,13 +59,13 @@ do{
     if($i % $report_every == 0){
         echo PHP_EOL . $i . PHP_EOL;
 		
-		// Not useful on large arrays
+	// Not useful on large arrays
         //$aggregation_space->PrintAggregationSpace();
         //$aggregation_space->PrintRandomWalkerSpace();
 		
         echo PHP_EOL . $aggregation_space->CalculateAggregationSpaceDensity() . ' of ' . $completion_density . PHP_EOL;
 		
-		// Draw current frame
+	// Draw current frame
         $agg = $aggregation_space->GetAggregationSpace();
         CreateImage($agg, $width, $height, $aggregation_space->CalculateAggregationSpaceDensity(), $i);
     }
