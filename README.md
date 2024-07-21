@@ -68,6 +68,37 @@ Test Audio Files:
 
 ___
 
+###### [Diffusion-Limited Aggrigation](Projects/Diffusion-Limited%20Aggrigation)
+Diffusion-limited aggregation (DLA) using Brownian motion.
+
+[DiffusionLimitedAggrigation.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/Diffusion-Limited%20Aggrigation/DiffusionLimitedAggrigation.php)
+
+Class Files:
+
+[AggregationSpace.Class.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/Diffusion-Limited%20Aggrigation/AggregationSpace.Class.php)
+
+[RandomWalker.Class.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/Diffusion-Limited%20Aggrigation/RandomWalker.Class.php)
+
+Examples:
+
+[DiffusionLimitedAggrigation.gif](https://github.com/geekgirljoy/PHP/blob/master/Projects/Diffusion-Limited%20Aggrigation/Examples/DiffusionLimitedAggrigation.gif)
+
+[DiffusionLimitedAggrigation2.gif](https://github.com/geekgirljoy/PHP/blob/master/Projects/Diffusion-Limited%20Aggrigation/Examples/DiffusionLimitedAggrigation2.gif)
+
+[DiffusionLimitedAggrigation3.gif](https://github.com/geekgirljoy/PHP/blob/master/Projects/Diffusion-Limited%20Aggrigation/Examples/DiffusionLimitedAggrigation3.gif)
+
+[DiffusionLimitedAggrigation4_large.gif](https://github.com/geekgirljoy/PHP/blob/master/Projects/Diffusion-Limited%20Aggrigation/Examples/DiffusionLimitedAggrigation4_large.gif)
+
+[DiffusionLimitedAggrigation5_large.gif](https://github.com/geekgirljoy/PHP/blob/master/Projects/Diffusion-Limited%20Aggrigation/Examples/DiffusionLimitedAggrigation5_large.gif)
+
+[DiffusionLimitedAggrigation_image_large.png](https://github.com/geekgirljoy/PHP/blob/master/Projects/Diffusion-Limited%20Aggrigation/Examples/DiffusionLimitedAggrigation_image_large.png)
+
+[DiffusionLimitedAggrigation_image2_large.png](https://github.com/geekgirljoy/PHP/blob/master/Projects/Diffusion-Limited%20Aggrigation/Examples/DiffusionLimitedAggrigation_image2_large.png)
+
+[DiffusionLimitedAggrigation_image_medium.png](https://github.com/geekgirljoy/PHP/blob/master/Projects/Diffusion-Limited%20Aggrigation/Examples/DiffusionLimitedAggrigation_image_medium.png)
+
+___
+
 ###### [Displacement Map](Projects/DisplacementMap)
 Create a displacement map from an image.
 
