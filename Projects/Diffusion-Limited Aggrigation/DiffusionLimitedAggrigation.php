@@ -55,7 +55,7 @@ do{
     $aggregation_space->AggregationCycle(); // Jiggle and stick
     $i++;
 	
-	// Reporting
+    // Reporting
     if($i % $report_every == 0){
         echo PHP_EOL . $i . PHP_EOL;
 		
