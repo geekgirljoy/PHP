@@ -165,6 +165,32 @@ An example of an [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform) wri
 
 ___
 
+###### [Image_To_Ascii](Projects/image_to_ascii)
+An example of Image to ASCII.
+
+[image2ascii.php](https://github.com/geekgirljoy/PHP/tree/master/Projects/image_to_ascii/image2ascii.php)
+
+[1337.jpg](https://github.com/geekgirljoy/PHP/tree/master/Projects/image_to_ascii/1337.jpg)
+
+[1337.jpg.txt](https://github.com/geekgirljoy/PHP/tree/master/Projects/image_to_ascii/1337.jpg.txt)
+
+[40217541018.jpg](https://github.com/geekgirljoy/PHP/tree/master/Projects/image_to_ascii/40217541018.jpg)
+
+[40217541018.jpg.txt](https://github.com/geekgirljoy/PHP/tree/master/Projects/image_to_ascii/40217541018.jpg.txt)
+
+[75160852579.jpg](https://github.com/geekgirljoy/PHP/tree/master/Projects/image_to_ascii/75160852579.jpg)
+
+[75160852579.jpg.txt](https://github.com/geekgirljoy/PHP/tree/master/Projects/image_to_ascii/75160852579.jpg.txt)
+
+[88250271418.jpg](https://github.com/geekgirljoy/PHP/tree/master/Projects/image_to_ascii/88250271418.jpg)
+
+[88250271418.jpg.txt](https://github.com/geekgirljoy/PHP/tree/master/Projects/image_to_ascii/88250271418.jpg.txt)
+
+[TicTacToe.jpg.jpg](https://github.com/geekgirljoy/PHP/tree/master/Projects/image_to_ascii/TicTacToe.jpg)
+
+[TicTacToe.jpg.jpg.txt](https://github.com/geekgirljoy/PHP/tree/master/Projects/image_to_ascii/TicTacToe.jpg.txt)
+
+___
 
 ###### [Image Mask Extraction](Projects/ImageMask)
 Extract part of an image from another image using a masking image... just... just because... HADOUKEN!
