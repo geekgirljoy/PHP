@@ -21,7 +21,7 @@ for($i = array_key_first($dataset) + 1; $i <= array_key_last($dataset); $i++){
       // but $i is also considered a peak (higher then $i-1), then the previous index
       // was mislabeled.
       if($peaks_and_troughs[$i-1] == 'peak'){
-         $peaks_and_troughs[$i-1] = '';
+         $peaks_and_troughs[$i-1] = 'ascending';
       }
    }
     
@@ -33,7 +33,7 @@ for($i = array_key_first($dataset) + 1; $i <= array_key_last($dataset); $i++){
       // but $i is also considered a trough (lower then $i-1), then the previous index
       // was mislabeled.      
       if($peaks_and_troughs[$i-1] == 'trough'){
-         $peaks_and_troughs[$i-1] = '';
+         $peaks_and_troughs[$i-1] = 'decending';
       }
    }
    
@@ -53,7 +53,7 @@ array(25) {
   [2]=>
   string(6) "trough"
   [3]=>
-  string(0) ""
+  string(0) "ascending"
   [4]=>
   string(4) "peak"
   [5]=>
@@ -61,7 +61,7 @@ array(25) {
   [6]=>
   string(4) "peak"
   [7]=>
-  string(0) ""
+  string(0) "decending"
   [8]=>
   string(6) "trough"
   [9]=>
@@ -69,13 +69,13 @@ array(25) {
   [10]=>
   string(6) "trough"
   [11]=>
-  string(0) ""
+  string(0) "ascending"
   [12]=>
-  string(0) ""
+  string(0) "ascending"
   [13]=>
-  string(0) ""
+  string(0) "ascending"
   [14]=>
-  string(0) ""
+  string(0) "ascending"
   [15]=>
   string(4) "peak"
   [16]=>
@@ -83,17 +83,17 @@ array(25) {
   [17]=>
   string(4) "peak"
   [18]=>
-  string(0) ""
+  string(0) "decending"
   [19]=>
-  string(0) ""
+  string(0) "decending"
   [20]=>
-  string(0) ""
+  string(0) "decending"
   [21]=>
-  string(0) ""
+  string(0) "decending"
   [22]=>
-  string(0) ""
+  string(0) "decending"
   [23]=>
-  string(0) ""
+  string(0) "decending"
   [24]=>
   string(6) "trough"
 }
