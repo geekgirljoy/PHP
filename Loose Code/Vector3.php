@@ -56,6 +56,10 @@ class Vector3{
     // This is a vector with the same direction as the original, but with a magnitude of 1
     public function Normalize(){
         $m = $this->Magnitude();
+    
+        // Thou shalt not normalize the zero vector
+        if ($m == 0.0) { throw new Exception("Cannot normalize zero vector"); }
+        
         return new Vector3($this->x / $m, $this->y / $m, $this->z / $m);
     }
 
