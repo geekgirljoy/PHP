@@ -289,6 +289,7 @@ This folder contains stand alone code. Each does something different and is here
 ###### [BuildingArrays.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/BuildingArrays.php)
 ###### [CheckForPalindromes.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/CheckForPalindromes.php)
 ###### [Closures.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/Closures.php)
+###### [CoMfItfOrMaT.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/CoMfItfOrMaT.php)
 ###### [ConfirmTheEndingOfAString.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/ConfirmTheEndingOfAString.php)
 ###### [ConvertColorToInputFloatRange.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/ConvertColorToInputFloatRange.php)
 ###### [DecFloatOctHexBin.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/DecFloatOctHexBin.php)
