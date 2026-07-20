@@ -323,6 +323,7 @@ This folder contains stand alone code. Each does something different and is here
 ###### [RealisticTypingTyposForAITypists.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/RealisticTypingTyposForAITypists.php)
 ###### [RepeatAString.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/RepeatAString.php)
 ###### [ReverseAString.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/ReverseAString.php)
+###### [RollDice.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/RollDice.php)
 ###### [RGB_HSL.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/RGB_HSL.php)
 ###### [Scan.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/Scan.php)
 ###### [SearchAndReplace.php](https://github.com/geekgirljoy/PHP/blob/master/Loose%20Code/SearchAndReplace.php)
