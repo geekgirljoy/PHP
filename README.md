@@ -158,7 +158,7 @@ ___
 ___
 
 ###### [FFT](Projects/FFT)
-An example of an [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform) writen in PHP
+An example of an [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform) writen in PHP.
 
 [fft.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/FFT/fft.php) & 
 [complex.class.php](https://github.com/geekgirljoy/PHP/blob/master/Projects/FFT/complex.class.php)
